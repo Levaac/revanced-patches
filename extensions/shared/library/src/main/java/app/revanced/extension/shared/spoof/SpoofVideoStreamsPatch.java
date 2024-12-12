@@ -1,4 +1,4 @@
-package app.revanced.extension.youtube.patches.spoof;
+package app.revanced.extension.shared.spoof;
 
 import android.net.Uri;
 
@@ -6,31 +6,29 @@ import androidx.annotation.Nullable;
 
 import java.nio.ByteBuffer;
 import java.util.Map;
-import java.util.Objects;
 
 import app.revanced.extension.shared.Logger;
 import app.revanced.extension.shared.Utils;
 import app.revanced.extension.shared.settings.BaseSettings;
 import app.revanced.extension.shared.settings.Setting;
-import app.revanced.extension.youtube.patches.spoof.requests.StreamingDataRequest;
-import app.revanced.extension.youtube.settings.Settings;
+import app.revanced.extension.shared.spoof.requests.StreamingDataRequest;
 
 @SuppressWarnings("unused")
 public class SpoofVideoStreamsPatch {
-    public static final class ForceiOSAVCAvailability implements Setting.Availability {
-        @Override
-        public boolean isAvailable() {
-            return Settings.SPOOF_VIDEO_STREAMS.get() && Settings.SPOOF_VIDEO_STREAMS_CLIENT_TYPE.get() == ClientType.IOS;
-        }
-    }
-
-    private static final boolean SPOOF_STREAMING_DATA = Settings.SPOOF_VIDEO_STREAMS.get();
-
+    private static final boolean SPOOF_STREAMING_DATA = BaseSettings.SPOOF_VIDEO_STREAMS.get();
     /**
      * Any unreachable ip address.  Used to intentionally fail requests.
      */
     private static final String UNREACHABLE_HOST_URI_STRING = "https://127.0.0.0";
     private static final Uri UNREACHABLE_HOST_URI = Uri.parse(UNREACHABLE_HOST_URI_STRING);
+
+    /**
+     * Injection point. Used by YT Music to disable stable volume.
+     */
+    public static void setClientTypeToAndroidVrNoHl() {
+        Logger.printDebug(() -> "Setting stream spoofing to: " + ClientType.ANDROID_VR_NO_HL);
+        BaseSettings.SPOOF_VIDEO_STREAMS_CLIENT_TYPE.save(ClientType.ANDROID_VR_NO_HL);
+    }
 
     /**
      * Injection point.
@@ -96,10 +94,19 @@ public class SpoofVideoStreamsPatch {
             try {
                 Uri uri = Uri.parse(url);
                 String path = uri.getPath();
+
                 // 'heartbeat' has no video id and appears to be only after playback has started.
-                if (path != null && path.contains("player") && !path.contains("heartbeat")) {
-                    String videoId = Objects.requireNonNull(uri.getQueryParameter("id"));
-                    StreamingDataRequest.fetchRequest(videoId, requestHeaders);
+                // 'refresh' has no video id and appears to happen when waiting for a livestream to start.
+                if (path != null && path.contains("player") && !path.contains("heartbeat")
+                        && !path.contains("refresh")) {
+                    String id = uri.getQueryParameter("id");
+                    if (id == null) {
+                        Logger.printException(() -> "Ignoring request that has no video id." +
+                                " Url: " + url + " headers: " + requestHeaders);
+                        return;
+                    }
+
+                    StreamingDataRequest.fetchRequest(id, requestHeaders);
                 }
             } catch (Exception ex) {
                 Logger.printException(() -> "buildRequest failure", ex);
@@ -164,5 +171,12 @@ public class SpoofVideoStreamsPatch {
         }
 
         return postData;
+    }
+
+    public static final class ForceiOSAVCAvailability implements Setting.Availability {
+        @Override
+        public boolean isAvailable() {
+            return BaseSettings.SPOOF_VIDEO_STREAMS.get() && BaseSettings.SPOOF_VIDEO_STREAMS_CLIENT_TYPE.get() == ClientType.IOS;
+        }
     }
 }
