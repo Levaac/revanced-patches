@@ -324,8 +324,12 @@ public final class app/revanced/patches/music/misc/gms/GmsCoreSupportPatchKt {
 	public static final fun getGmsCoreSupportPatch ()Lapp/revanced/patcher/patch/BytecodePatch;
 }
 
-public final class app/revanced/patches/music/misc/spoof/SpoofVideoStreamsPatchKt {
-	public static final fun getSpoofVideoStreamsPatch ()Lapp/revanced/patcher/patch/BytecodePatch;
+public final class app/revanced/patches/music/misc/spoof/SpoofClientPatchKt {
+	public static final fun getSpoofClientPatch ()Lapp/revanced/patcher/patch/BytecodePatch;
+}
+
+public final class app/revanced/patches/music/misc/spoof/UserAgentClientSpoofPatchKt {
+	public static final fun getUserAgentClientSpoofPatch ()Lapp/revanced/patcher/patch/BytecodePatch;
 }
 
 public final class app/revanced/patches/myexpenses/misc/pro/UnlockProPatchKt {
@@ -766,6 +770,10 @@ public final class app/revanced/patches/shared/misc/spoof/SpoofVideoStreamsPatch
 	public static synthetic fun spoofVideoStreamsPatch$default (Lkotlin/jvm/functions/Function1;Lkotlin/jvm/functions/Function1;ILjava/lang/Object;)Lapp/revanced/patcher/patch/BytecodePatch;
 }
 
+public final class app/revanced/patches/shared/misc/spoof/UserAgentClientSpoofPatchKt {
+	public static final fun userAgentClientSpoofPatch (Ljava/lang/String;)Lapp/revanced/patcher/patch/BytecodePatch;
+}
+
 public final class app/revanced/patches/solidexplorer2/functionality/filesize/RemoveFileSizeLimitPatchKt {
 	public static final fun getRemoveFileSizeLimitPatch ()Lapp/revanced/patcher/patch/BytecodePatch;
 }
@@ -1169,6 +1177,10 @@ public final class app/revanced/patches/youtube/layout/player/background/PlayerC
 }
 
 public final class app/revanced/patches/youtube/layout/player/fullscreen/OpenVideosFullscreenKt {
+	public static final fun getOpenVideosFullscreen ()Lapp/revanced/patcher/patch/BytecodePatch;
+}
+
+public final class app/revanced/patches/youtube/layout/player/fullscreen/OpenVideosFullscreenPatchKt {
 	public static final fun getOpenVideosFullscreenPatch ()Lapp/revanced/patcher/patch/BytecodePatch;
 }
 
@@ -1200,6 +1212,10 @@ public final class app/revanced/patches/youtube/layout/seekbar/SeekbarColorPatch
 
 public final class app/revanced/patches/youtube/layout/shortsautoplay/ShortsAutoplayPatchKt {
 	public static final fun getShortsAutoplayPatch ()Lapp/revanced/patcher/patch/BytecodePatch;
+}
+
+public final class app/revanced/patches/youtube/layout/shortsplayer/OpenShortsInRegularPlayerPatchKt {
+	public static final fun getOpenShortsInRegularPlayerPatch ()Lapp/revanced/patcher/patch/BytecodePatch;
 }
 
 public final class app/revanced/patches/youtube/layout/sponsorblock/SponsorBlockPatchKt {
@@ -1390,6 +1406,10 @@ public final class app/revanced/patches/youtube/misc/zoomhaptics/ZoomHapticsPatc
 
 public final class app/revanced/patches/youtube/shared/FingerprintsKt {
 	public static final fun getRollingNumberTextViewAnimationUpdateFingerprint ()Lapp/revanced/patcher/Fingerprint;
+}
+
+public final class app/revanced/patches/youtube/video/audio/ForceOriginalAudioPatchKt {
+	public static final fun getForceOriginalAudioPatch ()Lapp/revanced/patcher/patch/BytecodePatch;
 }
 
 public final class app/revanced/patches/youtube/video/information/VideoInformationPatchKt {

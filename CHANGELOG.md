@@ -1,3 +1,154 @@
+# [5.6.0-dev.4](https://github.com/ReVanced/revanced-patches/compare/v5.6.0-dev.3...v5.6.0-dev.4) (2024-12-20)
+
+
+### Bug Fixes
+
+* **YouTube - Force original audio:** Use correct original audio stream if app language is not English ([0d20171](https://github.com/ReVanced/revanced-patches/commit/0d2017133efac230887b5c2a331d87159df8af11))
+
+# [5.6.0-dev.3](https://github.com/ReVanced/revanced-patches/compare/v5.6.0-dev.2...v5.6.0-dev.3) (2024-12-20)
+
+
+### Bug Fixes
+
+* **Twitter - Change link sharing domain:** Use correct extension package ([ad7fab6](https://github.com/ReVanced/revanced-patches/commit/ad7fab67319ba23f267d27da9b74266965fc4be3))
+
+# [5.6.0-dev.2](https://github.com/ReVanced/revanced-patches/compare/v5.6.0-dev.1...v5.6.0-dev.2) (2024-12-19)
+
+
+### Bug Fixes
+
+* **YouTube - Open Shorts in regular player:** Do not show the miniplayer after opening a Short while a video is playing ([894e366](https://github.com/ReVanced/revanced-patches/commit/894e36665d17d5a3a5728961d424dffc55faa50b))
+
+# [5.6.0-dev.1](https://github.com/ReVanced/revanced-patches/compare/v5.5.2-dev.2...v5.6.0-dev.1) (2024-12-19)
+
+
+### Features
+
+* **YouTube:** Add `Open Shorts in regular player` patch ([#4153](https://github.com/ReVanced/revanced-patches/issues/4153)) ([c7c5e5b](https://github.com/ReVanced/revanced-patches/commit/c7c5e5b2b9cf63d8225bb6bd5e735ddf945b6c29))
+
+## [5.5.2-dev.2](https://github.com/ReVanced/revanced-patches/compare/v5.5.2-dev.1...v5.5.2-dev.2) (2024-12-17)
+
+
+### Bug Fixes
+
+* **YouTube - Hide layout components:** Hide new kind of community post ([#4155](https://github.com/ReVanced/revanced-patches/issues/4155)) ([08f68cb](https://github.com/ReVanced/revanced-patches/commit/08f68cb5d33f2cfe656d2f93d159c69981f31418))
+
+## [5.5.2-dev.1](https://github.com/ReVanced/revanced-patches/compare/v5.5.1...v5.5.2-dev.1) (2024-12-17)
+
+
+### Bug Fixes
+
+* **YouTube - Miniplayer:** Use estimated maximum on screen size for devices with low density screens ([#4150](https://github.com/ReVanced/revanced-patches/issues/4150)) ([2694158](https://github.com/ReVanced/revanced-patches/commit/2694158c3c9935ede21c96832533222f850068df))
+* **YouTube - SponsorBlock:** Show create new segment error messages using a dialog ([#4148](https://github.com/ReVanced/revanced-patches/issues/4148)) ([5870906](https://github.com/ReVanced/revanced-patches/commit/587090636dfff0b358b15026cf7d47c65a4296dc))
+
+## [5.5.1](https://github.com/ReVanced/revanced-patches/compare/v5.5.0...v5.5.1) (2024-12-16)
+
+
+### Bug Fixes
+
+* **YouTube:** Fix string translations ([52e04d3](https://github.com/ReVanced/revanced-patches/commit/52e04d340c1a85f3d683c67a15ae96529432d5fe))
+
+## [5.5.1-dev.1](https://github.com/ReVanced/revanced-patches/compare/v5.5.0...v5.5.1-dev.1) (2024-12-16)
+
+
+### Bug Fixes
+
+* **YouTube:** Fix string translations ([52e04d3](https://github.com/ReVanced/revanced-patches/commit/52e04d340c1a85f3d683c67a15ae96529432d5fe))
+
+# [5.5.0](https://github.com/ReVanced/revanced-patches/compare/v5.4.0...v5.5.0) (2024-12-16)
+
+
+### Bug Fixes
+
+* **Twitch:** Change recommended target to the latest app version ([fb32972](https://github.com/ReVanced/revanced-patches/commit/fb32972f4de92dac1fc5d73f56a392a671c4e94b))
+* **YouTube - Spoof video streams:** Make livestreams start at the current time when using iOS client   ([#4137](https://github.com/ReVanced/revanced-patches/issues/4137)) ([140f484](https://github.com/ReVanced/revanced-patches/commit/140f484b4b251b0dfa94163a63f61f45f5302052))
+* **YouTube Music:** Add `Spoof client patch` to fix playback ([#4132](https://github.com/ReVanced/revanced-patches/issues/4132)) ([b092508](https://github.com/ReVanced/revanced-patches/commit/b0925088e8b41636e285cb234593d545604ce461))
+
+
+### Features
+
+* **YouTube - Hide feed components:** Remove obsolete `Hide search result shelf header` option ([#4134](https://github.com/ReVanced/revanced-patches/issues/4134)) ([c71443a](https://github.com/ReVanced/revanced-patches/commit/c71443a08883ab10ef2553213c03b00e7c580a43))
+* **YouTube - Navigation buttons:** Add options to disable translucent status bar and navigation bar ([#4133](https://github.com/ReVanced/revanced-patches/issues/4133)) ([a2d2141](https://github.com/ReVanced/revanced-patches/commit/a2d2141cec9b0b4929e07a8010889b21c324b229))
+* **YouTube:** Add `Force original audio` patch ([#4122](https://github.com/ReVanced/revanced-patches/issues/4122)) ([f4aa440](https://github.com/ReVanced/revanced-patches/commit/f4aa4406080b91f01d623e54b11b99ea849ddcdf))
+
+# [5.5.0-dev.5](https://github.com/ReVanced/revanced-patches/compare/v5.5.0-dev.4...v5.5.0-dev.5) (2024-12-16)
+
+
+### Features
+
+* **YouTube - Navigation buttons:** Add options to disable translucent status bar and navigation bar ([#4133](https://github.com/ReVanced/revanced-patches/issues/4133)) ([a2d2141](https://github.com/ReVanced/revanced-patches/commit/a2d2141cec9b0b4929e07a8010889b21c324b229))
+
+# [5.5.0-dev.4](https://github.com/ReVanced/revanced-patches/compare/v5.5.0-dev.3...v5.5.0-dev.4) (2024-12-16)
+
+
+### Bug Fixes
+
+* **YouTube - Spoof video streams:** Make livestreams start at the current time when using iOS client   ([#4137](https://github.com/ReVanced/revanced-patches/issues/4137)) ([140f484](https://github.com/ReVanced/revanced-patches/commit/140f484b4b251b0dfa94163a63f61f45f5302052))
+
+# [5.5.0-dev.3](https://github.com/ReVanced/revanced-patches/compare/v5.5.0-dev.2...v5.5.0-dev.3) (2024-12-16)
+
+
+### Features
+
+* **YouTube - Hide feed components:** Remove obsolete `Hide search result shelf header` option ([#4134](https://github.com/ReVanced/revanced-patches/issues/4134)) ([c71443a](https://github.com/ReVanced/revanced-patches/commit/c71443a08883ab10ef2553213c03b00e7c580a43))
+
+# [5.5.0-dev.2](https://github.com/ReVanced/revanced-patches/compare/v5.5.0-dev.1...v5.5.0-dev.2) (2024-12-16)
+
+
+### Bug Fixes
+
+* **YouTube Music:** Add `Spoof client patch` to fix playback ([#4132](https://github.com/ReVanced/revanced-patches/issues/4132)) ([b092508](https://github.com/ReVanced/revanced-patches/commit/b0925088e8b41636e285cb234593d545604ce461))
+
+# [5.5.0-dev.1](https://github.com/ReVanced/revanced-patches/compare/v5.4.1-dev.1...v5.5.0-dev.1) (2024-12-15)
+
+
+### Features
+
+* **YouTube:** Add `Force original audio` patch ([#4122](https://github.com/ReVanced/revanced-patches/issues/4122)) ([f4aa440](https://github.com/ReVanced/revanced-patches/commit/f4aa4406080b91f01d623e54b11b99ea849ddcdf))
+
+## [5.4.1-dev.1](https://github.com/ReVanced/revanced-patches/compare/v5.4.0...v5.4.1-dev.1) (2024-12-14)
+
+
+### Bug Fixes
+
+* **Twitch:** Change recommended target to the latest app version ([fb32972](https://github.com/ReVanced/revanced-patches/commit/fb32972f4de92dac1fc5d73f56a392a671c4e94b))
+
+# [5.4.0](https://github.com/ReVanced/revanced-patches/compare/v5.3.0...v5.4.0) (2024-12-14)
+
+
+### Bug Fixes
+
+* **GmsCore support:** Adjust presentation of battery optimization dialog  ([#4091](https://github.com/ReVanced/revanced-patches/issues/4091)) ([5d8fc1b](https://github.com/ReVanced/revanced-patches/commit/5d8fc1bcd4e453298cfac086cdbdf279612bfb63))
+* **TikTok - Settings:** Use correct colors for dark mode ([#4087](https://github.com/ReVanced/revanced-patches/issues/4087)) ([6bd22ff](https://github.com/ReVanced/revanced-patches/commit/6bd22ffa7e8af4d8f5d2d3b1711bd92c44b4e4aa))
+* **TikTok - SIM Spoof:** Change patch to default off to fix login ([#4084](https://github.com/ReVanced/revanced-patches/issues/4084)) ([f4659a3](https://github.com/ReVanced/revanced-patches/commit/f4659a328eaf600e1e5f02a66fa2af4b6d8dc7c1))
+* **YouTube - Hide ads:** Hide new type of featured promotions ([#4113](https://github.com/ReVanced/revanced-patches/issues/4113)) ([13c7592](https://github.com/ReVanced/revanced-patches/commit/13c7592b21defd27e3a7aa9b219ffc0247bb5914))
+* **YouTube - Spoof video streams:** Fix error toast that is sometimes shown ([#4090](https://github.com/ReVanced/revanced-patches/issues/4090)) ([4c46cb2](https://github.com/ReVanced/revanced-patches/commit/4c46cb27a02c6f29626cd769b6a8e825645d5b16))
+* **YouTube - Spoof video streams:** Resolve playback of age restricted videos ([#4096](https://github.com/ReVanced/revanced-patches/issues/4096)) ([839a404](https://github.com/ReVanced/revanced-patches/commit/839a4045f1bb1759d89047834e0b7695781e82a3))
+* **YouTube Music - Bypass certificate checks:** Add a recommended target version ([#4104](https://github.com/ReVanced/revanced-patches/issues/4104)) ([17a5a6c](https://github.com/ReVanced/revanced-patches/commit/17a5a6c1691b0c23f601d3355b72f122c2bd5dcb))
+* **YouTube Music - Spoof video streams:** Disable stable volume ([#4097](https://github.com/ReVanced/revanced-patches/issues/4097)) ([16bb9df](https://github.com/ReVanced/revanced-patches/commit/16bb9dfc299612f3922724c136878606987ab132))
+
+
+### Features
+
+* Add Internal data documents provider patch ([#3830](https://github.com/ReVanced/revanced-patches/issues/3830)) ([cb22f65](https://github.com/ReVanced/revanced-patches/commit/cb22f652ed678d81ffda9ece659b3971225d6931))
+* **Change package name:** Add options to change provider and permission package names to handle installation conflicts ([75c740c](https://github.com/ReVanced/revanced-patches/commit/75c740c6ba2e0c62e567f7dc90cdad368fc4f372))
+* **Twitch:** Make patches compatible with latest versions ([#4099](https://github.com/ReVanced/revanced-patches/issues/4099)) ([eecfbb7](https://github.com/ReVanced/revanced-patches/commit/eecfbb7122a9072e55e687f2c003f63108654888))
+* **YouTube - Comments:** Add `Hide 'Chat summary'` ([#4110](https://github.com/ReVanced/revanced-patches/issues/4110)) ([269493c](https://github.com/ReVanced/revanced-patches/commit/269493cd198604f1438ea2850fb68fe900d0e56f))
+
+# [5.4.0-dev.11](https://github.com/ReVanced/revanced-patches/compare/v5.4.0-dev.10...v5.4.0-dev.11) (2024-12-14)
+
+
+### Features
+
+* **Twitch:** Make patches compatible with latest versions ([#4099](https://github.com/ReVanced/revanced-patches/issues/4099)) ([eecfbb7](https://github.com/ReVanced/revanced-patches/commit/eecfbb7122a9072e55e687f2c003f63108654888))
+
+# [5.4.0-dev.10](https://github.com/ReVanced/revanced-patches/compare/v5.4.0-dev.9...v5.4.0-dev.10) (2024-12-13)
+
+
+### Bug Fixes
+
+* **YouTube - Hide ads:** Hide new type of featured promotions ([#4113](https://github.com/ReVanced/revanced-patches/issues/4113)) ([13c7592](https://github.com/ReVanced/revanced-patches/commit/13c7592b21defd27e3a7aa9b219ffc0247bb5914))
+
 # [5.4.0-dev.9](https://github.com/ReVanced/revanced-patches/compare/v5.4.0-dev.8...v5.4.0-dev.9) (2024-12-12)
 
 

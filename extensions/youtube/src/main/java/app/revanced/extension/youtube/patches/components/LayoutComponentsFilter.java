@@ -36,7 +36,6 @@ public final class LayoutComponentsFilter extends Filter {
     );
 
     private final StringTrieSearch exceptions = new StringTrieSearch();
-    private final StringFilterGroup searchResultShelfHeader;
     private final StringFilterGroup inFeedSurvey;
     private final StringFilterGroup notifyMe;
     private final StringFilterGroup expandableMetadata;
@@ -74,13 +73,14 @@ public final class LayoutComponentsFilter extends Filter {
 
         final var communityPosts = new StringFilterGroup(
                 Settings.HIDE_COMMUNITY_POSTS,
-                "post_base_wrapper",
+                "post_base_wrapper", // may be obsolete and no longer needed.
                 "text_post_root.eml",
                 "images_post_root.eml",
-                "images_post_slim.eml",
+                "images_post_slim.eml", // may be obsolete and no longer needed.
                 "images_post_root_slim.eml",
                 "text_post_root_slim.eml",
-                "post_base_wrapper_slim.eml"
+                "post_base_wrapper_slim.eml",
+                "poll_post_root.eml"
         );
 
         final var communityGuidelines = new StringFilterGroup(
@@ -192,11 +192,6 @@ public final class LayoutComponentsFilter extends Filter {
                 Settings.HIDE_TIMED_REACTIONS,
                 "emoji_control_panel",
                 "timed_reaction"
-        );
-
-        searchResultShelfHeader = new StringFilterGroup(
-                Settings.HIDE_SEARCH_RESULT_SHELF_HEADER,
-                "shelf_header.eml"
         );
 
         notifyMe = new StringFilterGroup(
@@ -323,9 +318,6 @@ public final class LayoutComponentsFilter extends Filter {
 
             return false;
         }
-
-        // TODO: This also hides the feed Shorts shelf header
-        if (matchedGroup == searchResultShelfHeader && contentIndex != 0) return false;
 
         if (matchedGroup == horizontalShelves) {
             if (contentIndex == 0 && hideShelves()) {
