@@ -1,3 +1,32 @@
+## [5.7.1-dev.2](https://github.com/ReVanced/revanced-patches/compare/v5.7.1-dev.1...v5.7.1-dev.2) (2024-12-22)
+
+
+### Bug Fixes
+
+* **YouTube - Theme:** Use dark theme color for status and navigation bar ([0240efe](https://github.com/ReVanced/revanced-patches/commit/0240efe33e5444625ca2b760c861c9046d3dc836))
+
+## [5.7.1-dev.1](https://github.com/ReVanced/revanced-patches/compare/v5.7.0...v5.7.1-dev.1) (2024-12-22)
+
+
+### Bug Fixes
+
+* **YouTube - Spoof video streams:** Use Android VR authentication if using default audio language ([#4191](https://github.com/ReVanced/revanced-patches/issues/4191)) ([98773cc](https://github.com/ReVanced/revanced-patches/commit/98773cc7d46e5c9c7715b82c8006f1ccbcc5443c))
+
+# [5.7.0](https://github.com/ReVanced/revanced-patches/compare/v5.6.0...v5.7.0) (2024-12-22)
+
+
+### Bug Fixes
+
+* **YouTube - Force original audio:** Use correct availability for settings UI ([a7eedcb](https://github.com/ReVanced/revanced-patches/commit/a7eedcb4cca6b7b12629c478c24c0899c80e3615))
+* **YouTube - Spoof video stream:** Remove UI client type setting.  Allow setting default audio language. ([#4184](https://github.com/ReVanced/revanced-patches/issues/4184)) ([99f3f29](https://github.com/ReVanced/revanced-patches/commit/99f3f29c649bf7693c05bbce2bb49bd53e05f050))
+* **YouTube - Spoof video streams:** Remove iOS, add clients Android TV and Android Creator ([#4180](https://github.com/ReVanced/revanced-patches/issues/4180)) ([86abfb2](https://github.com/ReVanced/revanced-patches/commit/86abfb2b0d4675f0a1cb9ab244783075bfe89281))
+* **YouTube:** Change fingerprints to support a wider range of target versions ([8a09174](https://github.com/ReVanced/revanced-patches/commit/8a09174def205a26ce49cb7815097e235069526a))
+
+
+### Features
+
+* **YouTube:** Support version `19.47.53` ([#4182](https://github.com/ReVanced/revanced-patches/issues/4182)) ([2089e61](https://github.com/ReVanced/revanced-patches/commit/2089e613d36c45352db7d852aaee0087b1c3e1a4))
+
 # [5.7.0-dev.1](https://github.com/ReVanced/revanced-patches/compare/v5.6.1-dev.4...v5.7.0-dev.1) (2024-12-21)
 
 
