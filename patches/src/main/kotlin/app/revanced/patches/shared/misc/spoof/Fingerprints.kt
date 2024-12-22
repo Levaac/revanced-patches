@@ -1,7 +1,6 @@
 package app.revanced.patches.shared.misc.spoof
 
 import app.revanced.patcher.fingerprint
-import app.revanced.util.literal
 import com.android.tools.smali.dexlib2.AccessFlags
 import com.android.tools.smali.dexlib2.Opcode
 
@@ -112,12 +111,11 @@ internal val buildMediaDataSourceFingerprint = fingerprint {
     )
 }
 
-internal const val HLS_CURRENT_TIME_FEATURE_FLAG = 45355374L
-
-internal val hlsCurrentTimeFingerprint = fingerprint {
-    accessFlags(AccessFlags.PUBLIC, AccessFlags.FINAL)
-    parameters("Z", "L")
-    literal {
-        HLS_CURRENT_TIME_FEATURE_FLAG
+internal val patchIncludedExtensionMethodFingerprint = fingerprint {
+    accessFlags(AccessFlags.PRIVATE, AccessFlags.STATIC)
+    returns("Z")
+    parameters()
+    custom { method, classDef ->
+        classDef.type == EXTENSION_CLASS_DESCRIPTOR && method.name == "isPatchIncluded"
     }
 }

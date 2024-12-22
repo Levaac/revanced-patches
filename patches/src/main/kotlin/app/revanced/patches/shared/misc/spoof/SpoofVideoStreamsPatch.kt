@@ -12,7 +12,7 @@ import app.revanced.patcher.util.proxy.mutableTypes.MutableMethod.Companion.toMu
 import app.revanced.patches.all.misc.resources.addResourcesPatch
 import app.revanced.util.getReference
 import app.revanced.util.indexOfFirstInstructionOrThrow
-import app.revanced.util.insertFeatureFlagBooleanOverride
+import app.revanced.util.returnEarly
 import com.android.tools.smali.dexlib2.AccessFlags
 import com.android.tools.smali.dexlib2.Opcode
 import com.android.tools.smali.dexlib2.builder.MutableMethodImplementation
@@ -39,6 +39,12 @@ fun spoofVideoStreamsPatch(
     dependsOn(addResourcesPatch)
 
     execute {
+        // region Enable extension helper method used by other patches
+
+        patchIncludedExtensionMethodFingerprint.method.returnEarly(true)
+
+        // endregion
+
         // region Block /initplayback requests to fall back to /get_watch requests.
 
         val moveUriStringIndex = buildInitPlaybackRequestFingerprint.patternMatch!!.startIndex
@@ -200,15 +206,6 @@ fun spoofVideoStreamsPatch(
                     """,
             )
         }
-        // endregion
-
-        // region Fix iOS livestream current time.
-
-        hlsCurrentTimeFingerprint.method.insertFeatureFlagBooleanOverride(
-            HLS_CURRENT_TIME_FEATURE_FLAG,
-            "$EXTENSION_CLASS_DESCRIPTOR->fixHLSCurrentTime(Z)Z"
-        )
-
         // endregion
 
         executeBlock()
