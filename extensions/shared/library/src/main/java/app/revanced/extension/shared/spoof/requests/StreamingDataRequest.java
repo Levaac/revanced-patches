@@ -22,7 +22,6 @@ import java.util.concurrent.TimeoutException;
 import app.revanced.extension.shared.Logger;
 import app.revanced.extension.shared.Utils;
 import app.revanced.extension.shared.settings.BaseSettings;
-import app.revanced.extension.shared.spoof.AudioStreamLanguage;
 import app.revanced.extension.shared.spoof.ClientType;
 
 /**
@@ -36,7 +35,22 @@ import app.revanced.extension.shared.spoof.ClientType;
  */
 public class StreamingDataRequest {
 
-    private static final ClientType[] CLIENT_ORDER_TO_USE = ClientType.values();
+    private static final ClientType[] CLIENT_ORDER_TO_USE;
+
+    static {
+        ClientType[] allClientTypes = ClientType.values();
+        ClientType preferredClient = BaseSettings.SPOOF_VIDEO_STREAMS_CLIENT_TYPE.get();
+
+        CLIENT_ORDER_TO_USE = new ClientType[allClientTypes.length];
+        CLIENT_ORDER_TO_USE[0] = preferredClient;
+
+        int i = 1;
+        for (ClientType c : allClientTypes) {
+            if (c != preferredClient) {
+                CLIENT_ORDER_TO_USE[i++] = c;
+            }
+        }
+    }
 
     private static final String AUTHORIZATION_HEADER = "Authorization";
 
@@ -73,6 +87,13 @@ public class StreamingDataRequest {
                 }
             });
 
+    private static volatile ClientType lastSpoofedClientType;
+
+    public static String getLastSpoofedClientName() {
+        ClientType client = lastSpoofedClientType;
+        return client == null ? "Unknown" : client.friendlyName;
+    }
+
     private final String videoId;
 
     private final Future<ByteBuffer> future;
@@ -99,7 +120,8 @@ public class StreamingDataRequest {
     }
 
     @Nullable
-    private static HttpURLConnection send(ClientType clientType, String videoId,
+    private static HttpURLConnection send(ClientType clientType,
+                                          String videoId,
                                           Map<String, String> playerHeaders,
                                           boolean showErrorToasts) {
         Objects.requireNonNull(clientType);
@@ -107,21 +129,24 @@ public class StreamingDataRequest {
         Objects.requireNonNull(playerHeaders);
 
         final long startTime = System.currentTimeMillis();
-        Logger.printDebug(() -> "Fetching video streams for: " + videoId + " using client: " + clientType);
 
         try {
             HttpURLConnection connection = PlayerRoutes.getPlayerResponseConnectionFromRoute(GET_STREAMING_DATA, clientType);
             connection.setConnectTimeout(HTTP_TIMEOUT_MILLISECONDS);
             connection.setReadTimeout(HTTP_TIMEOUT_MILLISECONDS);
 
+            boolean authHeadersIncludes = false;
+
             for (String key : REQUEST_HEADER_KEYS) {
                 String value = playerHeaders.get(key);
+
                 if (value != null) {
                     if (key.equals(AUTHORIZATION_HEADER)) {
-                        if (!clientType.canLogin) {
+                        if (!clientType.useAuth) {
                             Logger.printDebug(() -> "Not including request header: " + key);
                             continue;
                         }
+                        authHeadersIncludes = true;
                     }
 
                     Logger.printDebug(() -> "Including request header: " + key);
@@ -129,7 +154,15 @@ public class StreamingDataRequest {
                 }
             }
 
-            String innerTubeBody = String.format(PlayerRoutes.createInnertubeBody(clientType), videoId);
+            if (!authHeadersIncludes && clientType.requiresAuth) {
+                Logger.printDebug(() -> "Skipping client since user is not logged in: " + clientType
+                        + " videoId: " + videoId);
+                return null;
+            }
+
+            Logger.printDebug(() -> "Fetching video streams for: " + videoId + " using client: " + clientType);
+
+            String innerTubeBody = PlayerRoutes.createInnertubeBody(clientType, videoId);
             byte[] requestBody = innerTubeBody.getBytes(StandardCharsets.UTF_8);
             connection.setFixedLengthStreamingMode(requestBody.length);
             connection.getOutputStream().write(requestBody);
@@ -161,14 +194,8 @@ public class StreamingDataRequest {
         // Retry with different client if empty response body is received.
         int i = 0;
         for (ClientType clientType : CLIENT_ORDER_TO_USE) {
-            // Show an error if the last client type fails, or if the debug is enabled then show for all attempts.
+            // Show an error if the last client type fails, or if debug is enabled then show for all attempts.
             final boolean showErrorToast = (++i == CLIENT_ORDER_TO_USE.length) || debugEnabled;
-
-            if (clientType == ClientType.ANDROID_VR_NO_AUTH
-                    && BaseSettings.SPOOF_VIDEO_STREAMS_LANGUAGE.get() == AudioStreamLanguage.DEFAULT) {
-                // Only use no auth Android VR if a non default audio language is selected.
-                continue;
-            }
 
             HttpURLConnection connection = send(clientType, videoId, playerHeaders, showErrorToast);
             if (connection != null) {
@@ -176,8 +203,8 @@ public class StreamingDataRequest {
                     // gzip encoding doesn't response with content length (-1),
                     // but empty response body does.
                     if (connection.getContentLength() == 0) {
-                        if (BaseSettings.DEBUG.get()) {
-                            Logger.printException(() -> "Ignoring empty client response: " + clientType);
+                        if (BaseSettings.DEBUG.get() && BaseSettings.DEBUG_TOAST_ON_ERROR.get()) {
+                            Utils.showToastShort("Ignoring empty spoof stream client: " + clientType);
                         }
                     } else {
                         try (InputStream inputStream = new BufferedInputStream(connection.getInputStream());
@@ -188,6 +215,7 @@ public class StreamingDataRequest {
                             while ((bytesRead = inputStream.read(buffer)) >= 0) {
                                 baos.write(buffer, 0, bytesRead);
                             }
+                            lastSpoofedClientType = clientType;
 
                             return ByteBuffer.wrap(baos.toByteArray());
                         }
@@ -198,7 +226,8 @@ public class StreamingDataRequest {
             }
         }
 
-        handleConnectionError("Could not fetch any client streams", null, debugEnabled);
+        lastSpoofedClientType = null;
+        handleConnectionError("Could not fetch any client streams", null, true);
         return null;
     }
 

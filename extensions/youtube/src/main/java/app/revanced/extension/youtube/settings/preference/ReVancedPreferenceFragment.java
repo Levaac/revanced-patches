@@ -25,9 +25,12 @@ import java.util.List;
 
 import app.revanced.extension.shared.Logger;
 import app.revanced.extension.shared.Utils;
+import app.revanced.extension.shared.settings.BaseSettings;
+import app.revanced.extension.shared.settings.EnumSetting;
 import app.revanced.extension.shared.settings.preference.AbstractPreferenceFragment;
 import app.revanced.extension.youtube.ThemeHelper;
 import app.revanced.extension.youtube.patches.playback.speed.CustomPlaybackSpeedPatch;
+import app.revanced.extension.youtube.settings.LicenseActivityHook;
 import app.revanced.extension.youtube.settings.Settings;
 
 /**
@@ -109,12 +112,17 @@ public class ReVancedPreferenceFragment extends AbstractPreferenceFragment {
                 CustomPlaybackSpeedPatch.initializeListPreference(playbackPreference);
             }
 
-            preference = findPreference(Settings.SPOOF_VIDEO_STREAMS_LANGUAGE.key);
-            if (preference instanceof ListPreference languagePreference) {
-                sortListPreferenceByValues(languagePreference, 1);
-            }
+            sortPreferenceListMenu(Settings.SPOOF_VIDEO_STREAMS_LANGUAGE);
+            sortPreferenceListMenu(BaseSettings.REVANCED_LANGUAGE);
         } catch (Exception ex) {
             Logger.printException(() -> "initialize failure", ex);
+        }
+    }
+
+    private void sortPreferenceListMenu(EnumSetting<?> setting) {
+        Preference preference = findPreference(setting.key);
+        if (preference instanceof ListPreference languagePreference) {
+            sortListPreferenceByValues(languagePreference, 1);
         }
     }
 
@@ -133,9 +141,6 @@ public class ReVancedPreferenceFragment extends AbstractPreferenceFragment {
                                     .getParent();
 
                             // Fix required for Android 15 and YT 19.45+
-                            // FIXME:
-                            // On Android 15 the text layout is not aligned the same as the parent
-                            // screen and it looks a little off.  Otherwise this works.
                             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.R) {
                                 rootView.setOnApplyWindowInsetsListener((v, insets) -> {
                                     Insets statusInsets = insets.getInsets(WindowInsets.Type.statusBars());
@@ -161,6 +166,8 @@ public class ReVancedPreferenceFragment extends AbstractPreferenceFragment {
                             if (toolbarTextView != null) {
                                 toolbarTextView.setTextColor(ThemeHelper.getForegroundColor());
                             }
+
+                            LicenseActivityHook.setToolbarLayoutParams(toolbar);
 
                             rootView.addView(toolbar, 0);
                             return false;

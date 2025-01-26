@@ -6,6 +6,7 @@ import app.revanced.patcher.extensions.InstructionExtensions.getInstruction
 import app.revanced.patcher.extensions.InstructionExtensions.replaceInstruction
 import app.revanced.patcher.patch.bytecodePatch
 import app.revanced.patcher.patch.resourcePatch
+import app.revanced.patcher.util.proxy.mutableTypes.MutableMethod.Companion.toMutable
 import app.revanced.patches.all.misc.packagename.setOrGetFallbackPackageName
 import app.revanced.patches.all.misc.resources.addResources
 import app.revanced.patches.all.misc.resources.addResourcesPatch
@@ -17,10 +18,17 @@ import app.revanced.patches.shared.misc.settings.preference.PreferenceScreenPref
 import app.revanced.patches.shared.misc.settings.settingsPatch
 import app.revanced.patches.youtube.misc.check.checkEnvironmentPatch
 import app.revanced.patches.youtube.misc.extension.sharedExtensionPatch
-import app.revanced.patches.youtube.misc.fix.cairo.disableCairoSettingsPatch
+import app.revanced.patches.youtube.misc.fix.playbackspeed.fixPlaybackSpeedWhilePlayingPatch
+import app.revanced.patches.youtube.misc.playservice.is_19_04_or_greater
+import app.revanced.patches.youtube.misc.playservice.is_19_34_or_greater
+import app.revanced.patches.youtube.misc.playservice.versionCheckPatch
 import app.revanced.util.*
+import com.android.tools.smali.dexlib2.AccessFlags
 import com.android.tools.smali.dexlib2.Opcode
+import com.android.tools.smali.dexlib2.builder.MutableMethodImplementation
 import com.android.tools.smali.dexlib2.iface.instruction.OneRegisterInstruction
+import com.android.tools.smali.dexlib2.immutable.ImmutableMethod
+import com.android.tools.smali.dexlib2.immutable.ImmutableMethodParameter
 import com.android.tools.smali.dexlib2.util.MethodUtil
 
 // Used by a fingerprint() from SettingsPatch.
@@ -37,13 +45,28 @@ private val settingsResourcePatch = resourcePatch {
     dependsOn(
         resourceMappingPatch,
         settingsPatch(
-            rootPreference = IntentPreference(
-                titleKey = "revanced_settings_title",
-                summaryKey = null,
-                intent = newIntent("revanced_settings_intent"),
-            ) to "settings_fragment",
-            preferences,
-        ),
+            listOf(
+                IntentPreference(
+                    titleKey = "revanced_settings_title",
+                    summaryKey = null,
+                    intent = newIntent("revanced_settings_intent"),
+                ) to "settings_fragment",
+                PreferenceCategory(
+                    titleKey = "revanced_settings_title",
+                    layout = "@layout/preference_group_title",
+                    preferences = setOf(
+                        IntentPreference(
+                            titleKey = "revanced_settings_submenu_title",
+                            summaryKey = null,
+                            icon = "@drawable/revanced_settings_icon",
+                            layout = "@layout/preference_with_icon",
+                            intent = newIntent("revanced_settings_intent"),
+                        )
+                    )
+                ) to "settings_fragment_cairo",
+            ),
+            preferences
+        )
     )
 
     execute {
@@ -51,6 +74,7 @@ private val settingsResourcePatch = resourcePatch {
         appearanceStringId = resourceMappings["string", "app_theme_appearance_dark"]
 
         arrayOf(
+            ResourceGroup("drawable", "revanced_settings_icon.xml"),
             ResourceGroup("layout", "revanced_settings_with_toolbar.xml"),
         ).forEach { resourceGroup ->
             copyResources("settings", resourceGroup)
@@ -73,7 +97,6 @@ private val settingsResourcePatch = resourcePatch {
         // Remove horizontal divider from the settings Preferences
         // To better match the appearance of the stock YouTube settings.
         document("res/values/styles.xml").use { document ->
-
             arrayOf(
                 "Theme.YouTube.Settings",
                 "Theme.YouTube.Settings.Dark",
@@ -93,7 +116,6 @@ private val settingsResourcePatch = resourcePatch {
         // Some devices freak out if undeclared data is passed to an intent,
         // and this change appears to fix the issue.
         document("AndroidManifest.xml").use { document ->
-
             val licenseElement = document.childNodes.findElementByAttributeValueOrThrow(
                 "android:name",
                 "com.google.android.libraries.social.licenses.LicenseActivity",
@@ -117,7 +139,8 @@ val settingsPatch = bytecodePatch(
         sharedExtensionPatch,
         settingsResourcePatch,
         addResourcesPatch,
-        disableCairoSettingsPatch,
+        versionCheckPatch,
+        fixPlaybackSpeedWhilePlayingPatch,
         // Currently there is no easy way to make a mandatory patch,
         // so for now this is a dependent of this patch.
         checkEnvironmentPatch,
@@ -140,6 +163,12 @@ val settingsPatch = bytecodePatch(
             selectable = true,
         )
 
+        if (is_19_34_or_greater) {
+            PreferenceScreen.GENERAL_LAYOUT.addPreferences(
+                SwitchPreference("revanced_restore_old_settings_menus")
+            )
+        }
+
         PreferenceScreen.MISC.addPreferences(
             TextPreference(
                 key = null,
@@ -148,6 +177,10 @@ val settingsPatch = bytecodePatch(
                 inputType = InputType.TEXT_MULTI_LINE,
                 tag = "app.revanced.extension.shared.settings.preference.ImportExportPreference",
             ),
+            ListPreference(
+                key = "revanced_language",
+                summaryKey = null
+            )
         )
 
         setThemeFingerprint.method.let { setThemeMethod ->
@@ -187,6 +220,40 @@ val settingsPatch = bytecodePatch(
         licenseActivityOnCreateFingerprint.classDef.apply {
             methods.removeIf { it.name != "onCreate" && !MethodUtil.isConstructor(it) }
         }
+
+        // Add context override to force a specific settings language.
+        licenseActivityOnCreateFingerprint.classDef.apply {
+            val attachBaseContext = ImmutableMethod(
+                type,
+                "attachBaseContext",
+                listOf(ImmutableMethodParameter("Landroid/content/Context;", null, null)),
+                "V",
+                AccessFlags.PROTECTED.value,
+                null,
+                null,
+                MutableMethodImplementation(3),
+            ).toMutable().apply {
+                addInstructions(
+                    """
+                        invoke-static { p1 }, $activityHookClassDescriptor->getAttachBaseContext(Landroid/content/Context;)Landroid/content/Context;
+                        move-result-object p1
+                        invoke-super { p0, p1 }, $superclass->attachBaseContext(Landroid/content/Context;)V
+                        return-void
+                    """
+                )
+            }
+
+            methods.add(attachBaseContext)
+        }
+
+        // Add setting to force cairo settings fragment on/off.
+        if (is_19_04_or_greater) {
+            cairoFragmentConfigFingerprint.method.insertFeatureFlagBooleanOverride(
+                CAIRO_CONFIG_LITERAL_VALUE,
+                "$activityHookClassDescriptor->useCairoSettingsFragment(Z)Z"
+            )
+        }
+
     }
 
     finalize {
@@ -222,17 +289,15 @@ object PreferenceScreen : BasePreferenceScreen() {
         key = "revanced_settings_screen_03_feed",
         summaryKey = null,
     )
-    val PLAYER = Screen(
-        key = "revanced_settings_screen_04_player",
+    val GENERAL_LAYOUT = Screen(
+        key = "revanced_settings_screen_04_general",
         summaryKey = null,
     )
-    val GENERAL_LAYOUT = Screen(
-        key = "revanced_settings_screen_05_general",
+    val PLAYER = Screen(
+        key = "revanced_settings_screen_05_player",
         summaryKey = null,
     )
 
-    // Don't sort, as related preferences are scattered apart.
-    // Can use title sorting after PreferenceCategory support is added.
     val SHORTS = Screen(
         key = "revanced_settings_screen_06_shorts",
         summaryKey = null,

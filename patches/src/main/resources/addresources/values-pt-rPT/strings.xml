@@ -33,6 +33,7 @@ Second \"item\" text"</string>
   <string name="revanced_check_environment_not_near_patch_time_invalid">Data de compilação do APK está corrompida</string>
   </patch>
   <patch id="misc.settings.settingsResourcePatch">
+  <string name="revanced_settings_submenu_title">Configurações</string>
   <string name="revanced_settings_title">ReVanced</string>
   <string name="revanced_settings_confirm_user_dialog_title">Desejas continuar?</string>
   <string name="revanced_settings_reset">Redefinir</string>
@@ -43,6 +44,62 @@ Second \"item\" text"</string>
   <string name="revanced_settings_import_reset">Configurações redefinidas para o padrão</string>
   <string name="revanced_settings_import_success">Configurações %d importadas</string>
   <string name="revanced_settings_import_failure_parse">A importação falhou: %s</string>
+  <string name="revanced_language_title">Idioma do ReVanced</string>
+  <string name="revanced_language_user_dialog_message">"As traduções para alguns idiomas podem estar faltando ou incompletas.
+
+Para traduzir novos idiomas, visite translate.revanced.app"</string>
+  <string name="revanced_language_DEFAULT">Idioma do aplicativo</string>
+  <string name="revanced_language_AR">Árabe</string>
+  <string name="revanced_language_AZ">Azerbaijani</string>
+  <string name="revanced_language_BG">Búlgaro</string>
+  <string name="revanced_language_BN">Bengali</string>
+  <string name="revanced_language_CA">Catalão</string>
+  <string name="revanced_language_CS">Tcheco</string>
+  <string name="revanced_language_DA">Dinamarquês</string>
+  <string name="revanced_language_DE">Alemão</string>
+  <string name="revanced_language_EL">Grego</string>
+  <string name="revanced_language_EN">Inglês</string>
+  <string name="revanced_language_ES">Espanhol</string>
+  <string name="revanced_language_ET">Estoniano</string>
+  <string name="revanced_language_FA">Persa</string>
+  <string name="revanced_language_FI">Finlandês</string>
+  <string name="revanced_language_FR">Francês</string>
+  <string name="revanced_language_GU">Gujarati</string>
+  <string name="revanced_language_HI">Hindi</string>
+  <string name="revanced_language_HR">Croata</string>
+  <string name="revanced_language_HU">Húngaro</string>
+  <string name="revanced_language_ID">Indonésio</string>
+  <string name="revanced_language_IT">Italiano</string>
+  <string name="revanced_language_JA">Japonês</string>
+  <string name="revanced_language_KK">Cazaque</string>
+  <string name="revanced_language_KO">Coreano</string>
+  <string name="revanced_language_LT">Lituano</string>
+  <string name="revanced_language_LV">Letão</string>
+  <string name="revanced_language_MK">Macedônio</string>
+  <string name="revanced_language_MN">Mongol</string>
+  <string name="revanced_language_MR">Marata</string>
+  <string name="revanced_language_MS">Malaio</string>
+  <string name="revanced_language_MY">Birmanês</string>
+  <string name="revanced_language_NL">Holandês</string>
+  <string name="revanced_language_OR">Odia</string>
+  <string name="revanced_language_PA">Punjabi</string>
+  <string name="revanced_language_PL">Polonês</string>
+  <string name="revanced_language_PT">Português</string>
+  <string name="revanced_language_RO">Romeno</string>
+  <string name="revanced_language_RU">Russo</string>
+  <string name="revanced_language_SK">Eslovaco</string>
+  <string name="revanced_language_SL">Esloveno</string>
+  <string name="revanced_language_SR">Sérvio</string>
+  <string name="revanced_language_SV">Sueco</string>
+  <string name="revanced_language_SW">Suaíli</string>
+  <string name="revanced_language_TA">Tâmil</string>
+  <string name="revanced_language_TE">Telugu</string>
+  <string name="revanced_language_TH">Tailandês</string>
+  <string name="revanced_language_TR">Turco</string>
+  <string name="revanced_language_UK">Ucraniano</string>
+  <string name="revanced_language_UR">Urdu</string>
+  <string name="revanced_language_VI">Vietnamita</string>
+  <string name="revanced_language_ZH">Chinês</string>
   <string name="revanced_pref_import_export_title">Importar / Exportar</string>
   <string name="revanced_pref_import_export_summary">Importar / Exportar configurações do ReVanced</string>
   <!-- Settings about dialog. -->
@@ -57,17 +114,17 @@ Second \"item\" text"</string>
   <!-- Translations of this should not be longer than the original English text, otherwise the text can be clipped and not entirely shown. -->
   <string name="gms_core_toast_not_installed_message">MicroG GmsCore não está instalado. Instale-o.</string>
   <string name="gms_core_dialog_title">Ação necessária</string>
-  <string name="gms_core_dialog_not_whitelisted_not_allowed_in_background_message">"MicroG GmsCore không có quyền chạy ngầm.
+  <string name="gms_core_dialog_not_whitelisted_not_allowed_in_background_message">"O MicroG GmsCore não tem permissão para rodar em segundo plano.
 
-Vui lòng làm theo hướng dẫn \"Đừng tắt ứng dụng của tôi\" cho điện thoại của bạn, và áp dụng các hướng dẫn cho cài đặt MicroG của bạn.
+Siga o guia \"Não mate meu app\" para o seu telefone e aplique as instruções à sua instalação do MicroG.
 
-Điều này là cần thiết để ứng dụng hoạt động."</string>
+Isso é necessário para que o aplicativo funcione."</string>
   <string name="gms_core_dialog_open_website_text">Abrir site</string>
-  <string name="gms_core_dialog_not_whitelisted_using_battery_optimizations_message">"Việc tối ưu hóa pin của MicroG GmsCore phải được tắt để tránh sự cố.
+  <string name="gms_core_dialog_not_whitelisted_using_battery_optimizations_message">"As otimizações de bateria do MicroG GmsCore devem ser desativadas para evitar problemas.
 
-Việc tắt tối ưu hóa pin cho MicroG sẽ không ảnh hưởng tiêu cực đến việc sử dụng pin.
+A desativação das otimizações de bateria para o MicroG não afetará negativamente o uso da bateria.
 
-Nhấn nút tiếp tục và cho phép thay đổi tối ưu hóa."</string>
+Toque no botão continuar e permita as alterações de otimização."</string>
   <string name="gms_core_dialog_continue_text">Continuar</string>
   </patch>
   </app>
@@ -77,12 +134,15 @@ Nhấn nút tiếp tục và cho phép thay đổi tối ưu hóa."</string>
   <string name="revanced_settings_screen_01_ads_title">Anúncios</string>
   <string name="revanced_settings_screen_02_alt_thumbnails_title">Miniaturas alternativas</string>
   <string name="revanced_settings_screen_03_feed_title">Recomendações</string>
-  <string name="revanced_settings_screen_04_player_title">Leitor</string>
-  <string name="revanced_settings_screen_05_general_title">Interface geral</string>
+  <string name="revanced_settings_screen_04_general_title">Geral</string>
+  <string name="revanced_settings_screen_05_player_title">Jogador</string>
   <string name="revanced_settings_screen_07_seekbar_title">Barra de pesquisa</string>
   <string name="revanced_settings_screen_08_swipe_controls_title">Controlos por Gestos</string>
-  <string name="revanced_settings_screen_11_misc_title">Outros</string>
+  <string name="revanced_settings_screen_11_misc_title">Diversos</string>
   <string name="revanced_settings_screen_12_video_title">Vídeo</string>
+  <string name="revanced_restore_old_settings_menus_title">Restaurar menus de configurações antigos</string>
+  <string name="revanced_restore_old_settings_menus_summary_on">Os menus de configurações antigos são mostrados</string>
+  <string name="revanced_restore_old_settings_menus_summary_off">Os menus de configurações antigos não são mostrados</string>
   </patch>
   <patch id="misc.backgroundplayback.backgroundPlaybackPatch">
   <string name="revanced_shorts_disable_background_playback_title">Desativar reprodução de fundo de Shorts</string>
@@ -125,12 +185,12 @@ Bạn sẽ không được thông báo về bất kỳ sự kiện bất ngờ n
   <string name="revanced_hide_channel_watermark_summary_on">A marca d\'água está escondida</string>
   <string name="revanced_hide_channel_watermark_summary_off">A marca d\'água está visível</string>
   <string name="revanced_hide_horizontal_shelves_title">Esconder pategorias horizontais</string>
-  <string name="revanced_hide_horizontal_shelves_summary_on">"Các kệ được ẩn:
-• Tin tức nóng
-• Tiếp tục xem
-• Khám phá thêm kênh
-• Mua sắm
-• Xem lại"</string>
+  <string name="revanced_hide_horizontal_shelves_summary_on">"As prateleiras estão ocultas, tais como:
+• Últimas notícias
+• Continuar assistindo
+• Explorar mais canais
+• Compras
+• Assistir novamente"</string>
   <string name="revanced_hide_horizontal_shelves_summary_off">Categorias são visíveis</string>
   <!-- 'Join' should be translated using the same localized wording YouTube displays.
                  This appears in the video player for certain videos. -->
@@ -445,6 +505,9 @@ Tính năng này chỉ khả dụng cho các thiết bị cũ"</string>
   <string name="revanced_swipe_overlay_background_alpha_summary">A visibilidade do fundo da sobreposição de deslize</string>
   <string name="revanced_swipe_threshold_title">Limite de magnitude</string>
   <string name="revanced_swipe_threshold_summary">A quantidade limite para deslizar irá ocorrer</string>
+  <string name="revanced_swipe_change_video_title">Ativar deslizar para mudar de vídeo</string>
+  <string name="revanced_swipe_change_video_summary_on">Deslizar no modo de ecrã inteiro mudará para o vídeo seguinte/anterior</string>
+  <string name="revanced_swipe_change_video_summary_off">Deslizar no modo de ecrã inteiro não mudará para o vídeo seguinte/anterior</string>
   </patch>
   <patch id="layout.autocaptions.autoCaptionsPatch">
   <string name="revanced_auto_captions_title">Desativar legendas automáticas</string>
@@ -628,15 +691,18 @@ Lưu ý: Bật tính năng này cũng buộc ẩn quảng cáo video"</string>
   <string name="revanced_shorts_player_screen_summary">Ocultar ou mostrar componentes no player Shorts</string>
   <!-- 'home' should be translated using the same localized wording YouTube displays for the home tab. -->
   <string name="revanced_hide_shorts_home_title">Esconder Shorts no feed inicial</string>
-  <string name="revanced_hide_shorts_home_summary_on">Os Shorts no feed inicial estão ocultos</string>
-  <string name="revanced_hide_shorts_home_summary_off">Os calções no feed inicial são exibidos</string>
+  <string name="revanced_hide_shorts_home_summary_on">Oculto no feed inicial e vídeos relacionados</string>
+  <string name="revanced_hide_shorts_home_summary_off">Exibido no feed inicial e vídeos relacionados</string>
   <!-- 'subscription' should be translated using the same localized wording YouTube displays for the subscription tab. -->
   <string name="revanced_hide_shorts_subscriptions_title">Esconder Shorts na assinatura do feed</string>
-  <string name="revanced_hide_shorts_subscriptions_summary_on">Shorts in subscrition feed are hidden</string>
-  <string name="revanced_hide_shorts_subscriptions_summary_off">Os calções no feed de inscrições são exibidos</string>
+  <string name="revanced_hide_shorts_subscriptions_summary_on">Oculto no feed de inscrições</string>
+  <string name="revanced_hide_shorts_subscriptions_summary_off">Mostrado no feed de inscrições</string>
   <string name="revanced_hide_shorts_search_title">Esconder Shorts nos resultados de pesquisa</string>
-  <string name="revanced_hide_shorts_search_summary_on">Shorts nos resultados da pesquisa estão ocultos</string>
-  <string name="revanced_hide_shorts_search_summary_off">Shorts são mostrados nos resultados da pesquisa</string>
+  <string name="revanced_hide_shorts_search_summary_on">Ocultar nos resultados de pesquisa</string>
+  <string name="revanced_hide_shorts_search_summary_off">Mostrado nos resultados da pesquisa</string>
+  <string name="revanced_hide_shorts_history_title">Ocultar Shorts no histórico de visualização</string>
+  <string name="revanced_hide_shorts_history_summary_on">Oculto no histórico de visualização</string>
+  <string name="revanced_hide_shorts_history_summary_off">Exibido no histórico de visualização</string>
   <!-- 'join' should be translated using the same localized wording YouTube displays for the button. -->
   <string name="revanced_hide_shorts_join_button_title">Esconder botão \'Aderir\'</string>
   <string name="revanced_hide_shorts_join_button_summary_on">O botão \"Aderir\" está escondido</string>
@@ -737,6 +803,13 @@ Lưu ý: Bật tính năng này cũng buộc ẩn quảng cáo video"</string>
   <string name="revanced_hide_player_popup_panels_title">Esconder painéis popup do player</string>
   <string name="revanced_hide_player_popup_panels_summary_on">Painéis pop-up do jogador estão escondidos</string>
   <string name="revanced_hide_player_popup_panels_summary_off">Painéis pop-up do jogador são visíveis</string>
+  </patch>
+  <patch id="layout.player.fullscreen.exitFullscreenPatch">
+  <string name="revanced_exit_fullscreen_title">Sair do modo de ecrã inteiro no final do vídeo</string>
+  <string name="revanced_exit_fullscreen_entry_1">Desativado</string>
+  <string name="revanced_exit_fullscreen_entry_2">Retrato</string>
+  <string name="revanced_exit_fullscreen_entry_3">Paisagem</string>
+  <string name="revanced_exit_fullscreen_entry_4">Retrato e paisagem</string>
   </patch>
   <patch id="layout.player.fullscreen.openVideosFullscreen">
   <string name="revanced_open_videos_fullscreen_portrait_title">Abrir vídeos em retrato em tela cheia</string>
@@ -1007,6 +1080,23 @@ Pronto para enviar?"</string>
   <string name="revanced_sb_about">Sobre</string>
   <string name="revanced_sb_about_api_sum">Os dados são fornecidos pela API do SponsorBlock. Toque aqui para aprender mais e ver downloads para outras plataformas</string>
   </patch>
+  <patch id="layout.formfactor.changeFormFactorPatch">
+  <string name="revanced_change_form_factor_title">Fator de forma do layout</string>
+  <string name="revanced_change_form_factor_entry_1">Padrão</string>
+  <string name="revanced_change_form_factor_entry_2">Telefone</string>
+  <string name="revanced_change_form_factor_entry_3">Tablet</string>
+  <string name="revanced_change_form_factor_entry_4">Automotivo</string>
+  <string name="revanced_change_form_factor_user_dialog_message">"As alterações incluem:
+
+Layout do tablet
+• As postagens da comunidade estão ocultas
+
+Layout automotivo
+• O menu do histórico de exibição está oculto
+• A guia Explorar foi restaurada
+• Shorts abrem no reprodutor normal
+• O feed é organizado por tópicos e canal"</string>
+  </patch>
   <patch id="layout.spoofappversion.spoofAppVersionPatch">
   <string name="revanced_spoof_app_version_title">Versão do Spoof app</string>
   <string name="revanced_spoof_app_version_summary_on">Versão falsificada</string>
@@ -1020,6 +1110,7 @@ Nếu sau này tắt, bạn nên xóa dữ liệu ứng dụng để tránh lỗ
                  This is because the 'General layout' menu uses alphabetic sorting, and it functionally works better if the spoof target selector appears below the 'Spoof app version' UI switch -->
   <string name="revanced_spoof_app_version_target_title">Destaque de versão do app</string>
   <string name="revanced_spoof_app_version_target_entry_1">19.35.36 - Restaurar os icones antigos do reprodutor dos Shorts</string>
+  <string name="revanced_spoof_app_version_target_entry_2">19.26.42 - Restaurar ícones antigos de navegação e barra de ferramentas</string>
   <!-- 'RYD' is 'Return YouTube Dislike' -->
   <string name="revanced_spoof_app_version_target_legacy_entry_1">18.33.40 - Restaurar RYD em Modo Curto Incógnito</string>
   <string name="revanced_spoof_app_version_target_legacy_entry_2">18.20.39 - Restaurar menu de qualidade de vídeo &amp;</string>
@@ -1062,12 +1153,6 @@ Nếu sau này tắt, bạn nên xóa dữ liệu ứng dụng để tránh lỗ
   <string name="revanced_shorts_autoplay_background_title">Reprodução automática de Shorts no fundo</string>
   <string name="revanced_shorts_autoplay_background_summary_on">Reprodução de fundo de Shorts irá reproduzir automaticamente</string>
   <string name="revanced_shorts_autoplay_background_summary_off">Reprodução de fundo de Shorts irá repetir</string>
-  </patch>
-  <patch id="layout.tablet.enableTabletLayoutPatch">
-  <string name="revanced_tablet_layout_title">Habilitar layout do tablet</string>
-  <string name="revanced_tablet_layout_summary_on">O layout do tablet está ativado</string>
-  <string name="revanced_tablet_layout_summary_off">Layout de tablet desativado</string>
-  <string name="revanced_tablet_layout_user_dialog_message">Postagens da comunidade não aparecem nos layouts do tablet</string>
   </patch>
   <patch id="layout.miniplayer.miniplayerPatch">
   <string name="revanced_miniplayer_screen_title">Miniplayer</string>
@@ -1153,11 +1238,11 @@ Bật tính năng này có thể sửa lỗi hình ảnh bị thiếu do bị ch
   <string name="revanced_alt_thumbnail_options_entry_2">DeArrow &amp; Miniaturas originais</string>
   <string name="revanced_alt_thumbnail_options_entry_3">DeArrow &amp; Ainda captura</string>
   <string name="revanced_alt_thumbnail_options_entry_4">Ainda captura</string>
-  <string name="revanced_alt_thumbnail_dearrow_about_summary">"DeArrow cung cấp hình thu nhỏ được cộng đồng đóng góp cho video YouTube. Các hình thu nhỏ này thường có liên quan hơn so với những hình thu nhỏ do YouTube cung cấp
+  <string name="revanced_alt_thumbnail_dearrow_about_summary">"O DeArrow fornece miniaturas coletivas para vídeos do YouTube. Essas miniaturas geralmente são mais relevantes do que aquelas fornecidas pelo YouTube
 
-Nếu bật, URL video sẽ được gửi đến máy chủ API và không có dữ liệu nào khác được gửi. Nếu video không có hình thu nhỏ DeArrow, hình thu nhỏ gốc hoặc ảnh chụp tĩnh sẽ được hiển thị
+Se ativado, os URLs dos vídeos serão enviados ao servidor da API e nenhum outro dado será enviado. Se um vídeo não tiver miniaturas DeArrow, as originais ou as capturas estáticas serão mostradas
 
-Nhấn vào đây để tìm hiểu thêm về DeArrow"</string>
+Toque aqui para saber mais sobre DeArrow"</string>
   <string name="revanced_alt_thumbnail_dearrow_connection_toast_title">Mostrar uma notificação flutuante se a API não estiver disponível</string>
   <string name="revanced_alt_thumbnail_dearrow_connection_toast_summary_on">Toast é visível se o Derow não está disponível</string>
   <string name="revanced_alt_thumbnail_dearrow_connection_toast_summary_off">Toast não é visível se o DeArrow não está disponível</string>
@@ -1232,6 +1317,7 @@ Bật tính năng này có thể mở khóa chất lượng video cao hơn"</str
   <string name="revanced_force_original_audio_title">Forçar áudio original</string>
   <string name="revanced_force_original_audio_summary_on">Usando áudio original</string>
   <string name="revanced_force_original_audio_summary_off">Usando áudio padrão</string>
+  <string name="revanced_force_original_audio_not_available">Para usar este recurso, altere a falsificação de fluxo para o tipo de cliente iOS</string>
   </patch>
   <patch id="video.quality.rememberVideoQualityPatch">
   <!-- Translations should use the same text as revanced_custom_playback_speeds_auto -->
@@ -1259,6 +1345,8 @@ Bật tính năng này có thể mở khóa chất lượng video cao hơn"</str
   <string name="revanced_custom_playback_speeds_invalid">Tốc độ tùy chỉnh phải nhỏ hơn %s</string>
   <string name="revanced_custom_playback_speeds_parse_exception">Tốc độ phát lại tùy chỉnh không hợp lệ</string>
   <string name="revanced_custom_playback_speeds_auto">Automático</string>
+  <string name="revanced_speed_tap_and_hold_title">Velocidade personalizada ao tocar e segurar</string>
+  <string name="revanced_speed_tap_and_hold_summary">Velocidade de reprodução de 0 a 8</string>
   </patch>
   <patch id="video.speed.remember.rememberPlaybackSpeedPatch">
   <string name="revanced_remember_playback_speed_last_selected_title">Lembrar velocidade de reprodução</string>
@@ -1287,65 +1375,27 @@ Bật tính năng này có thể mở khóa chất lượng video cao hơn"</str
 Phát video có thể không hoạt động"</string>
   <string name="revanced_spoof_video_streams_user_dialog_message">Desativar essa configuração pode causar problemas de reprodução de vídeo.</string>
   <string name="revanced_spoof_video_streams_client_type_title">Cliente padrão</string>
-  <string name="revanced_spoof_video_streams_about_title">Efeito colateral de falsificação</string>
-  <string name="revanced_spoof_video_streams_about_summary">"• Os vídeos infantis podem não ser reproduzidos
-• O menu da faixa de áudio está ausente
-• O volume estável não está disponível
+  <!-- 'no auth' means no authentication -->
+  <string name="revanced_spoof_video_streams_client_type_android_vr_no_auth">Android VR (sem autenticação)</string>
+  <string name="revanced_spoof_video_streams_ios_force_avc_title">Força AVC iOS (H.264)</string>
+  <string name="revanced_spoof_video_streams_ios_force_avc_summary_on">Codificação de vídeo forçada a AVC (H.264)</string>
+  <string name="revanced_spoof_video_streams_ios_force_avc_summary_off">Codificação de vídeo é automaticamente determinada</string>
+  <string name="revanced_spoof_video_streams_ios_force_avc_user_dialog_message">"Ativar pode melhorar bateria e resolver reprodução travando.
+
+A AVC tem resolução máxima de 1080p, Opus audio codec não está disponível, e reprodução de vídeo usará mais internet que VP9 ou AV1."</string>
+  <string name="revanced_spoof_video_streams_about_ios_tv_title">Efeitos secundários de falsificação do iOS</string>
+  <string name="revanced_spoof_video_streams_about_ios_tv_summary">"• Filmes ou vídeos pagos podem não ser reproduzidos
+• Volume estável não está disponível
+• Os vídeos terminam 1 segundo mais cedo"</string>
+  <string name="revanced_spoof_video_streams_about_android_title">Efeitos colaterais da falsificação do Android</string>
+  <string name="revanced_spoof_video_streams_about_android_summary">"• O menu da faixa de áudio está faltando
+• Volume estável não está disponível
 • Forçar áudio original não está disponível"</string>
-  <string name="revanced_spoof_video_streams_language_title">Idioma padrão do fluxo de áudio</string>
-  <string name="revanced_spoof_video_streams_language_DEFAULT">Idioma do aplicativo</string>
-  <string name="revanced_spoof_video_streams_language_AR">Arábico</string>
-  <string name="revanced_spoof_video_streams_language_AZ">Azerbaijanês</string>
-  <string name="revanced_spoof_video_streams_language_BG">Búlgaro</string>
-  <string name="revanced_spoof_video_streams_language_BN">Bengali</string>
-  <string name="revanced_spoof_video_streams_language_CA">Catalão</string>
-  <string name="revanced_spoof_video_streams_language_CS">Tcheco</string>
-  <string name="revanced_spoof_video_streams_language_DA">Dinamarquês</string>
-  <string name="revanced_spoof_video_streams_language_DE">Alemão</string>
-  <string name="revanced_spoof_video_streams_language_EL">Grego</string>
-  <string name="revanced_spoof_video_streams_language_EN">Inglês</string>
-  <string name="revanced_spoof_video_streams_language_ES">Espanhol</string>
-  <string name="revanced_spoof_video_streams_language_ET">Estônio</string>
-  <string name="revanced_spoof_video_streams_language_FA">Persa</string>
-  <string name="revanced_spoof_video_streams_language_FI">Finlandês</string>
-  <string name="revanced_spoof_video_streams_language_FR">Francês</string>
-  <string name="revanced_spoof_video_streams_language_GU">Gujarati</string>
-  <string name="revanced_spoof_video_streams_language_HI">Hindi</string>
-  <string name="revanced_spoof_video_streams_language_HR">Croata</string>
-  <string name="revanced_spoof_video_streams_language_HU">Húngaro</string>
-  <string name="revanced_spoof_video_streams_language_ID">Indonésio</string>
-  <string name="revanced_spoof_video_streams_language_IT">Italiano</string>
-  <string name="revanced_spoof_video_streams_language_JA">﻿Japonês</string>
-  <string name="revanced_spoof_video_streams_language_KK">Cazaque</string>
-  <string name="revanced_spoof_video_streams_language_KO">Coreano</string>
-  <string name="revanced_spoof_video_streams_language_LT">Lituano</string>
-  <string name="revanced_spoof_video_streams_language_LV">Letã</string>
-  <string name="revanced_spoof_video_streams_language_MK">Macedónio</string>
-  <string name="revanced_spoof_video_streams_language_MN">Mongol</string>
-  <string name="revanced_spoof_video_streams_language_MR">Marathi</string>
-  <string name="revanced_spoof_video_streams_language_MS">Malaio</string>
-  <string name="revanced_spoof_video_streams_language_MY">Birmanês</string>
-  <string name="revanced_spoof_video_streams_language_NL">Neerlandês</string>
-  <string name="revanced_spoof_video_streams_language_OR">Odia</string>
-  <string name="revanced_spoof_video_streams_language_PA">Punjabi</string>
-  <string name="revanced_spoof_video_streams_language_PL">Polonês</string>
-  <string name="revanced_spoof_video_streams_language_PT_BR">Português (Brasil)</string>
-  <string name="revanced_spoof_video_streams_language_PT_PT">Português (Portugal)</string>
-  <string name="revanced_spoof_video_streams_language_RO">Romeno</string>
-  <string name="revanced_spoof_video_streams_language_RU">Russo</string>
-  <string name="revanced_spoof_video_streams_language_SK">Eslovaco</string>
-  <string name="revanced_spoof_video_streams_language_SL">Esloveno</string>
-  <string name="revanced_spoof_video_streams_language_SR">Sérvio</string>
-  <string name="revanced_spoof_video_streams_language_SV">Sueco</string>
-  <string name="revanced_spoof_video_streams_language_SW">Suaíli</string>
-  <string name="revanced_spoof_video_streams_language_TA">Tâmil</string>
-  <string name="revanced_spoof_video_streams_language_TE">Telugu</string>
-  <string name="revanced_spoof_video_streams_language_TH">Tailandês</string>
-  <string name="revanced_spoof_video_streams_language_TR">Turco</string>
-  <string name="revanced_spoof_video_streams_language_UK">Ucraniano</string>
-  <string name="revanced_spoof_video_streams_language_UR">Urdu</string>
-  <string name="revanced_spoof_video_streams_language_VI">Tiếng Việt</string>
-  <string name="revanced_spoof_video_streams_language_ZH">Chinês</string>
+  <string name="revanced_spoof_video_streams_about_no_av1">• Nenhum codec de vídeo AV1</string>
+  <string name="revanced_spoof_streaming_data_stats_for_nerds_title">Mostrar em Estatísticas para nerds</string>
+  <string name="revanced_spoof_streaming_data_stats_for_nerds_summary_on">O tipo de cliente é mostrado em Estatísticas para nerds</string>
+  <string name="revanced_spoof_streaming_data_stats_for_nerds_summary_off">O cliente está oculto em Estatísticas para nerds</string>
+  <string name="revanced_spoof_video_streams_language_title">Idioma padrão do fluxo de áudio de VR</string>
   </patch>
   </app>
   <app id="twitch">

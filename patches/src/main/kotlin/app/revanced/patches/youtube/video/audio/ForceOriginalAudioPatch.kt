@@ -31,8 +31,7 @@ private const val EXTENSION_CLASS_DESCRIPTOR =
 @Suppress("unused")
 val forceOriginalAudioPatch = bytecodePatch(
     name = "Force original audio",
-    description = "Adds an option to always use the original audio track. " +
-            "This patch does nothing if 'Spoof video streams' is enabled.",
+    description = "Adds an option to always use the original audio track.",
 ) {
     dependsOn(
         sharedExtensionPatch,
@@ -58,7 +57,10 @@ val forceOriginalAudioPatch = bytecodePatch(
         addResources("youtube", "video.audio.forceOriginalAudioPatch")
 
         PreferenceScreen.VIDEO.addPreferences(
-            SwitchPreference("revanced_force_original_audio")
+            SwitchPreference(
+                key = "revanced_force_original_audio",
+                tag = "app.revanced.extension.youtube.settings.preference.ForceOriginalAudioSwitchPreference"
+            )
         )
 
         fun Method.firstFormatStreamingModelCall(

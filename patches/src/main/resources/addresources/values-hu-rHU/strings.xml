@@ -33,6 +33,7 @@ Second \"item\" text"</string>
   <string name="revanced_check_environment_not_near_patch_time_invalid">Az APK build dátuma sérült</string>
   </patch>
   <patch id="misc.settings.settingsResourcePatch">
+  <string name="revanced_settings_submenu_title">Beállítások</string>
   <string name="revanced_settings_title">ReVanced</string>
   <string name="revanced_settings_confirm_user_dialog_title">Szeretné folytatni?</string>
   <string name="revanced_settings_reset">Visszaállítás</string>
@@ -43,6 +44,62 @@ Second \"item\" text"</string>
   <string name="revanced_settings_import_reset">A ReVanced beállítások visszaállnak az alapértelmezettre</string>
   <string name="revanced_settings_import_success">%d beállítás importálva</string>
   <string name="revanced_settings_import_failure_parse">Sikertelen importálás: %s</string>
+  <string name="revanced_language_title">ReVanced nyelve</string>
+  <string name="revanced_language_user_dialog_message">"A fordítások hiányozhatnak vagy hiányosak lehetnek néhány nyelven.
+
+Új nyelvek lefordításához látogasson el ide: translate.revanced.app"</string>
+  <string name="revanced_language_DEFAULT">Alkalmazás nyelve</string>
+  <string name="revanced_language_AR">Arab</string>
+  <string name="revanced_language_AZ">Azeri</string>
+  <string name="revanced_language_BG">Bolgár</string>
+  <string name="revanced_language_BN">Bengáli</string>
+  <string name="revanced_language_CA">Katalán</string>
+  <string name="revanced_language_CS">Cseh</string>
+  <string name="revanced_language_DA">Dán</string>
+  <string name="revanced_language_DE">Német</string>
+  <string name="revanced_language_EL">Görög</string>
+  <string name="revanced_language_EN">Angol</string>
+  <string name="revanced_language_ES">Spanyol</string>
+  <string name="revanced_language_ET">Észt</string>
+  <string name="revanced_language_FA">Perzsa</string>
+  <string name="revanced_language_FI">Finn</string>
+  <string name="revanced_language_FR">Francia</string>
+  <string name="revanced_language_GU">Gudzsaráti</string>
+  <string name="revanced_language_HI">Hindi</string>
+  <string name="revanced_language_HR">Horvát</string>
+  <string name="revanced_language_HU">Magyar</string>
+  <string name="revanced_language_ID">Indonéz</string>
+  <string name="revanced_language_IT">Olasz</string>
+  <string name="revanced_language_JA">Japán</string>
+  <string name="revanced_language_KK">Kazah</string>
+  <string name="revanced_language_KO">Koreai</string>
+  <string name="revanced_language_LT">Litván</string>
+  <string name="revanced_language_LV">Lett</string>
+  <string name="revanced_language_MK">Macedón</string>
+  <string name="revanced_language_MN">Mongol</string>
+  <string name="revanced_language_MR">Maráthi</string>
+  <string name="revanced_language_MS">Maláj</string>
+  <string name="revanced_language_MY">Burmai</string>
+  <string name="revanced_language_NL">Holland</string>
+  <string name="revanced_language_OR">Odia</string>
+  <string name="revanced_language_PA">Pandzsábi</string>
+  <string name="revanced_language_PL">Lengyel</string>
+  <string name="revanced_language_PT">Portugál</string>
+  <string name="revanced_language_RO">Román</string>
+  <string name="revanced_language_RU">Orosz</string>
+  <string name="revanced_language_SK">Szlovák</string>
+  <string name="revanced_language_SL">Szlovén</string>
+  <string name="revanced_language_SR">Szerb</string>
+  <string name="revanced_language_SV">Svéd</string>
+  <string name="revanced_language_SW">Szuahéli</string>
+  <string name="revanced_language_TA">Tamil</string>
+  <string name="revanced_language_TE">Telugu</string>
+  <string name="revanced_language_TH">Thai</string>
+  <string name="revanced_language_TR">Török</string>
+  <string name="revanced_language_UK">Ukrán</string>
+  <string name="revanced_language_UR">Urdu</string>
+  <string name="revanced_language_VI">Vietnami</string>
+  <string name="revanced_language_ZH">Kínai</string>
   <string name="revanced_pref_import_export_title">Importálás / exportálás</string>
   <string name="revanced_pref_import_export_summary">ReVanced beállítások importálása / exportálása</string>
   <!-- Settings about dialog. -->
@@ -77,12 +134,15 @@ Kattintson a folytatás gombra, és engedélyezze az optimalizálási módosít�
   <string name="revanced_settings_screen_01_ads_title">Hirdetések</string>
   <string name="revanced_settings_screen_02_alt_thumbnails_title">Alternatív indexképek</string>
   <string name="revanced_settings_screen_03_feed_title">Hírfolyam</string>
-  <string name="revanced_settings_screen_04_player_title">Lejátszó</string>
-  <string name="revanced_settings_screen_05_general_title">Általános elrendezés</string>
+  <string name="revanced_settings_screen_04_general_title">Általános</string>
+  <string name="revanced_settings_screen_05_player_title">Lejátszó</string>
   <string name="revanced_settings_screen_07_seekbar_title">Keresősáv</string>
   <string name="revanced_settings_screen_08_swipe_controls_title">Csúsztatási vezérlők</string>
   <string name="revanced_settings_screen_11_misc_title">Egyéb</string>
   <string name="revanced_settings_screen_12_video_title">Videó</string>
+  <string name="revanced_restore_old_settings_menus_title">Régi beállítási menük visszaállítása</string>
+  <string name="revanced_restore_old_settings_menus_summary_on">A régi beállítások menüpontok megjelennek</string>
+  <string name="revanced_restore_old_settings_menus_summary_off">A régi beállítások menüpontok nem jelennek meg</string>
   </patch>
   <patch id="misc.backgroundplayback.backgroundPlaybackPatch">
   <string name="revanced_shorts_disable_background_playback_title">A Shorts háttérben történő lejátszásának letiltása</string>
@@ -445,6 +505,9 @@ Ez a funkció csak régebbi eszközökön érhető el"</string>
   <string name="revanced_swipe_overlay_background_alpha_summary">A csúsztatási átfedés hátterének láthatósága</string>
   <string name="revanced_swipe_threshold_title">A csúsztatás küszöbértéke</string>
   <string name="revanced_swipe_threshold_summary">A csúsztatáshoz szükséges küszöbérték</string>
+  <string name="revanced_swipe_change_video_title">Engedélyezze az ujjbegyújtással történő videóváltást</string>
+  <string name="revanced_swipe_change_video_summary_on">Teljes képernyős módban történő ujjbegyújtás megváltoztatja a következő/előző videóra</string>
+  <string name="revanced_swipe_change_video_summary_off">Teljes képernyős módban történő ujjbegyújtás nem változtatja meg a következő/előző videóra</string>
   </patch>
   <patch id="layout.autocaptions.autoCaptionsPatch">
   <string name="revanced_auto_captions_title">Automatikus feliratok letiltása</string>
@@ -628,15 +691,18 @@ Megjegyzés: Ez a beállítás a videóhirdetések kényszerű elrejtését is m
   <string name="revanced_shorts_player_screen_summary">Összetevők elrejtése vagy megjelenítése a Shorts lejátszóban</string>
   <!-- 'home' should be translated using the same localized wording YouTube displays for the home tab. -->
   <string name="revanced_hide_shorts_home_title">Shorts elrejtése a Kezdőlap feedben</string>
-  <string name="revanced_hide_shorts_home_summary_on">A Shortsok elrejtve a Kezdőlap feedben</string>
-  <string name="revanced_hide_shorts_home_summary_off">A Shortsok megjelennek a Kezdőlap feedben</string>
+  <string name="revanced_hide_shorts_home_summary_on">Elrejtve a főoldalon és a kapcsolódó videókban</string>
+  <string name="revanced_hide_shorts_home_summary_off">Megjelenítve a főoldalon és a kapcsolódó videókban</string>
   <!-- 'subscription' should be translated using the same localized wording YouTube displays for the subscription tab. -->
   <string name="revanced_hide_shorts_subscriptions_title">Shortsok elrejtése a Feliratkozások feedben</string>
-  <string name="revanced_hide_shorts_subscriptions_summary_on">A Shortsok megjelennek a Feliratkozások feedben</string>
-  <string name="revanced_hide_shorts_subscriptions_summary_off">A Shortsok megjelennek a Feliratkozások feedben</string>
+  <string name="revanced_hide_shorts_subscriptions_summary_on">Elrejtve az előfizetési hírfolyamban</string>
+  <string name="revanced_hide_shorts_subscriptions_summary_off">Megjelenik az előfizetési hírfolyamban</string>
   <string name="revanced_hide_shorts_search_title">Shortsok elrejtése a keresési eredményekben</string>
-  <string name="revanced_hide_shorts_search_summary_on">A Shortsok el vannak rejtve a keresési eredményekben</string>
-  <string name="revanced_hide_shorts_search_summary_off">A Shortsok megjelenek a keresési eredményekben</string>
+  <string name="revanced_hide_shorts_search_summary_on">A keresési eredmények között elrejtve</string>
+  <string name="revanced_hide_shorts_search_summary_off">Megjelenik a keresési eredmények között</string>
+  <string name="revanced_hide_shorts_history_title">Shorts elrejtése a megtekintési előzményekben</string>
+  <string name="revanced_hide_shorts_history_summary_on">Elrejtve a megtekintési előzményekben</string>
+  <string name="revanced_hide_shorts_history_summary_off">Megjelenik a megtekintési előzményekben</string>
   <!-- 'join' should be translated using the same localized wording YouTube displays for the button. -->
   <string name="revanced_hide_shorts_join_button_title">Csatlakozás gomb elrejtése</string>
   <string name="revanced_hide_shorts_join_button_summary_on">A csatlakozás gomb el van rejtve</string>
@@ -737,6 +803,13 @@ Megjegyzés: Ez a beállítás a videóhirdetések kényszerű elrejtését is m
   <string name="revanced_hide_player_popup_panels_title">Lejátszó előugró paneleinek elrejtése</string>
   <string name="revanced_hide_player_popup_panels_summary_on">A lejátszó előugró panelei el vannak rejtve</string>
   <string name="revanced_hide_player_popup_panels_summary_off">A lejátszó előugró panelei megjelennek</string>
+  </patch>
+  <patch id="layout.player.fullscreen.exitFullscreenPatch">
+  <string name="revanced_exit_fullscreen_title">Kilépés a teljes képernyőből</string>
+  <string name="revanced_exit_fullscreen_entry_1">Letiltva</string>
+  <string name="revanced_exit_fullscreen_entry_2">Portré</string>
+  <string name="revanced_exit_fullscreen_entry_3">Tájkép</string>
+  <string name="revanced_exit_fullscreen_entry_4">Portré és tájkép</string>
   </patch>
   <patch id="layout.player.fullscreen.openVideosFullscreen">
   <string name="revanced_open_videos_fullscreen_portrait_title">Nyissa meg a videókat teljes képernyős portréban</string>
@@ -1006,6 +1079,23 @@ Készen állsz a beküldésre?"</string>
   <string name="revanced_sb_about">Rólunk</string>
   <string name="revanced_sb_about_api_sum">Az adatokat a SponsorBlock API biztosítja. Koppintson ide, ha többet szeretne megtudni és megtekintené a letöltéseket más platformokra</string>
   </patch>
+  <patch id="layout.formfactor.changeFormFactorPatch">
+  <string name="revanced_change_form_factor_title">Elrendezési űrlap faktor</string>
+  <string name="revanced_change_form_factor_entry_1">Alapértelmezett</string>
+  <string name="revanced_change_form_factor_entry_2">Telefon</string>
+  <string name="revanced_change_form_factor_entry_3">Tablet</string>
+  <string name="revanced_change_form_factor_entry_4">Autóipari</string>
+  <string name="revanced_change_form_factor_user_dialog_message">"Módosítások:
+
+Tablet elrendezés
+• A közösségi bejegyzések el vannak rejtve
+
+Autóipari elrendezés
+• Az előzmények menü el van rejtve
+• A Felfedezés fül visszaáll
+• A Shorts a szokásos lejátszóban nyílik meg
+• A feed témák és csatornák szerint van rendezve"</string>
+  </patch>
   <patch id="layout.spoofappversion.spoofAppVersionPatch">
   <string name="revanced_spoof_app_version_title">Alkalmazásverzió hamisítása</string>
   <string name="revanced_spoof_app_version_summary_on">A verzió hamisítva</string>
@@ -1019,6 +1109,7 @@ Ha később kikapcsolja, akkor ajánlott az alkalmazás adatait törölni, hogy 
                  This is because the 'General layout' menu uses alphabetic sorting, and it functionally works better if the spoof target selector appears below the 'Spoof app version' UI switch -->
   <string name="revanced_spoof_app_version_target_title">Hamisított alkalmazásverzió célja</string>
   <string name="revanced_spoof_app_version_target_entry_1">19.35.36 - A régi Shorts lejátszó ikonok visszaállítása</string>
+  <string name="revanced_spoof_app_version_target_entry_2">19.26.42 - A régi navigációs és eszköztári ikonok visszaállítása</string>
   <!-- 'RYD' is 'Return YouTube Dislike' -->
   <string name="revanced_spoof_app_version_target_legacy_entry_1">18.33.40 - RYD visszaállítása Shorts inkognitó módban</string>
   <string name="revanced_spoof_app_version_target_legacy_entry_2">18.20.39 - Széles videósebesség és minőség menü visszaállítása</string>
@@ -1061,12 +1152,6 @@ Ha később kikapcsolja, akkor ajánlott az alkalmazás adatait törölni, hogy 
   <string name="revanced_shorts_autoplay_background_title">Shorts automatikus lejátszása a háttérben</string>
   <string name="revanced_shorts_autoplay_background_summary_on">Shorts automatikusan elindul a háttérben</string>
   <string name="revanced_shorts_autoplay_background_summary_off">Shorts háttérben történő lejátszása megismétlődik</string>
-  </patch>
-  <patch id="layout.tablet.enableTabletLayoutPatch">
-  <string name="revanced_tablet_layout_title">Táblagépes elrendezés engedélyezése</string>
-  <string name="revanced_tablet_layout_summary_on">Táblagépes elrendezés engedélyezve</string>
-  <string name="revanced_tablet_layout_summary_off">Táblagépes elrendezés letiltva</string>
-  <string name="revanced_tablet_layout_user_dialog_message">A közösségi posztok nem jelennek meg táblagépes elrendezésben</string>
   </patch>
   <patch id="layout.miniplayer.miniplayerPatch">
   <string name="revanced_miniplayer_screen_title">Minilejátszó</string>
@@ -1231,6 +1316,7 @@ Ez a beállítás lehetővé teszi a magasabb videóminőségek feloldását"</s
   <string name="revanced_force_original_audio_title">Eredeti hang kikényszerítése</string>
   <string name="revanced_force_original_audio_summary_on">Eredeti hang használata</string>
   <string name="revanced_force_original_audio_summary_off">Alapértelmezett hang használata</string>
+  <string name="revanced_force_original_audio_not_available">Ezt a funkciót iOS klienstípusra állított adatfolyam-hamisítással használhatja</string>
   </patch>
   <patch id="video.quality.rememberVideoQualityPatch">
   <!-- Translations should use the same text as revanced_custom_playback_speeds_auto -->
@@ -1258,6 +1344,8 @@ Ez a beállítás lehetővé teszi a magasabb videóminőségek feloldását"</s
   <string name="revanced_custom_playback_speeds_invalid">Az egyéni sebességeknek kevesebbnek kell lenniük, mint %s</string>
   <string name="revanced_custom_playback_speeds_parse_exception">Érvénytelen egyéni lejátszási sebességek</string>
   <string name="revanced_custom_playback_speeds_auto">Automatikus</string>
+  <string name="revanced_speed_tap_and_hold_title">Egyéni koppintás és tartás sebesség</string>
+  <string name="revanced_speed_tap_and_hold_summary">Lejátszási sebesség 0-8 között</string>
   </patch>
   <patch id="video.speed.remember.rememberPlaybackSpeedPatch">
   <string name="revanced_remember_playback_speed_last_selected_title">Lejátszási sebesség módosításainak megjegyzése</string>
@@ -1286,65 +1374,27 @@ Ez a beállítás lehetővé teszi a magasabb videóminőségek feloldását"</s
 A videólejátszás nem működhet"</string>
   <string name="revanced_spoof_video_streams_user_dialog_message">A beállítás kikapcsolása videolejátszási problémákat okozhat.</string>
   <string name="revanced_spoof_video_streams_client_type_title">Alapértelmezett kliens</string>
-  <string name="revanced_spoof_video_streams_about_title">Hamisítás mellékhatásai</string>
-  <string name="revanced_spoof_video_streams_about_summary">"• Gyermekvideók előfordulhat, hogy nem játszódnak le
-• Hiányzik a hangsáv menü
-• A stabil hangerő nem elérhető
-• Az eredeti hang kényszerítése nem elérhető"</string>
-  <string name="revanced_spoof_video_streams_language_title">Alapértelmezett hangfolyam nyelve</string>
-  <string name="revanced_spoof_video_streams_language_DEFAULT">Alkalmazás nyelve</string>
-  <string name="revanced_spoof_video_streams_language_AR">Arab</string>
-  <string name="revanced_spoof_video_streams_language_AZ">Azerbajdzsáni</string>
-  <string name="revanced_spoof_video_streams_language_BG">Bolgár</string>
-  <string name="revanced_spoof_video_streams_language_BN">Bengáli</string>
-  <string name="revanced_spoof_video_streams_language_CA">Katalán</string>
-  <string name="revanced_spoof_video_streams_language_CS">Cseh</string>
-  <string name="revanced_spoof_video_streams_language_DA">Dán</string>
-  <string name="revanced_spoof_video_streams_language_DE">Német</string>
-  <string name="revanced_spoof_video_streams_language_EL">Görög</string>
-  <string name="revanced_spoof_video_streams_language_EN">Angol</string>
-  <string name="revanced_spoof_video_streams_language_ES">Spanyol</string>
-  <string name="revanced_spoof_video_streams_language_ET">Észt</string>
-  <string name="revanced_spoof_video_streams_language_FA">Perzsa</string>
-  <string name="revanced_spoof_video_streams_language_FI">Finn</string>
-  <string name="revanced_spoof_video_streams_language_FR">Francia</string>
-  <string name="revanced_spoof_video_streams_language_GU">Gudzsaráti</string>
-  <string name="revanced_spoof_video_streams_language_HI">hindi</string>
-  <string name="revanced_spoof_video_streams_language_HR">Horvát</string>
-  <string name="revanced_spoof_video_streams_language_HU">Magyar</string>
-  <string name="revanced_spoof_video_streams_language_ID">Indonéz</string>
-  <string name="revanced_spoof_video_streams_language_IT">Olasz</string>
-  <string name="revanced_spoof_video_streams_language_JA">Japán</string>
-  <string name="revanced_spoof_video_streams_language_KK">Kazah</string>
-  <string name="revanced_spoof_video_streams_language_KO">Koreai</string>
-  <string name="revanced_spoof_video_streams_language_LT">Litván</string>
-  <string name="revanced_spoof_video_streams_language_LV">Lett</string>
-  <string name="revanced_spoof_video_streams_language_MK">Macedón</string>
-  <string name="revanced_spoof_video_streams_language_MN">Mongol</string>
-  <string name="revanced_spoof_video_streams_language_MR">Maráthi</string>
-  <string name="revanced_spoof_video_streams_language_MS">Maláj</string>
-  <string name="revanced_spoof_video_streams_language_MY">Burmai</string>
-  <string name="revanced_spoof_video_streams_language_NL">Holland</string>
-  <string name="revanced_spoof_video_streams_language_OR">odia</string>
-  <string name="revanced_spoof_video_streams_language_PA">Pandzsábi</string>
-  <string name="revanced_spoof_video_streams_language_PL">Lengyel</string>
-  <string name="revanced_spoof_video_streams_language_PT_BR">Portugál (Brazil)</string>
-  <string name="revanced_spoof_video_streams_language_PT_PT">Portugál (Portugália)</string>
-  <string name="revanced_spoof_video_streams_language_RO">Román</string>
-  <string name="revanced_spoof_video_streams_language_RU">Orosz</string>
-  <string name="revanced_spoof_video_streams_language_SK">Szlovák</string>
-  <string name="revanced_spoof_video_streams_language_SL">Szlovén</string>
-  <string name="revanced_spoof_video_streams_language_SR">Szerb</string>
-  <string name="revanced_spoof_video_streams_language_SV">Svéd</string>
-  <string name="revanced_spoof_video_streams_language_SW">Szuahéli</string>
-  <string name="revanced_spoof_video_streams_language_TA">tamil</string>
-  <string name="revanced_spoof_video_streams_language_TE">telugu</string>
-  <string name="revanced_spoof_video_streams_language_TH">Tháj</string>
-  <string name="revanced_spoof_video_streams_language_TR">Török</string>
-  <string name="revanced_spoof_video_streams_language_UK">Ukrán</string>
-  <string name="revanced_spoof_video_streams_language_UR">urdu</string>
-  <string name="revanced_spoof_video_streams_language_VI">Vietnámi</string>
-  <string name="revanced_spoof_video_streams_language_ZH">Kínai</string>
+  <!-- 'no auth' means no authentication -->
+  <string name="revanced_spoof_video_streams_client_type_android_vr_no_auth">Android VR (nincs hitelesítés)</string>
+  <string name="revanced_spoof_video_streams_ios_force_avc_title">Az iOS kényyszerített AVC (H.264) videokodeket használ</string>
+  <string name="revanced_spoof_video_streams_ios_force_avc_summary_on">A videokodek AVC-re kényszerítve (H.264)</string>
+  <string name="revanced_spoof_video_streams_ios_force_avc_summary_off">A videokodek meghatározása automatikusan történik</string>
+  <string name="revanced_spoof_video_streams_ios_force_avc_user_dialog_message">"Ennek engedélyezése javíthatja az akkumulátor élettartamát és kijavíthatja a lejátszás akadozását.
+
+Az AVC maximális felbontása 1080p, az Opus audiokodek nem érhető el, és a videolejátszás több internetes adatot használ, mint a VP9 vagy az AV1."</string>
+  <string name="revanced_spoof_video_streams_about_ios_tv_title">iOS hamisítási mellékhatások</string>
+  <string name="revanced_spoof_video_streams_about_ios_tv_summary">"• Előfordulhat, hogy a filmeket és a fizetős videókat nem lehet lejátszani
+• Nem áll rendelkezésre stabil hangerő
+• A videók 1 másodperccel korábban érnek véget"</string>
+  <string name="revanced_spoof_video_streams_about_android_title">Android hamisítási mellékhatások</string>
+  <string name="revanced_spoof_video_streams_about_android_summary">"• Hiányzik a hangsáv menü
+• Nem áll rendelkezésre stabil hangerő
+• Az eredeti hang kényszerítése nem érhető el"</string>
+  <string name="revanced_spoof_video_streams_about_no_av1">• Nincs AV1 videokodek</string>
+  <string name="revanced_spoof_streaming_data_stats_for_nerds_title">Megjelenítés a Statisztikákban</string>
+  <string name="revanced_spoof_streaming_data_stats_for_nerds_summary_on">A kliens típusa a Statisztikákban látható</string>
+  <string name="revanced_spoof_streaming_data_stats_for_nerds_summary_off">A kliens el van rejtve a Statisztikákban</string>
+  <string name="revanced_spoof_video_streams_language_title">VR alapértelmezett audio adatfolyam nyelve</string>
   </patch>
   </app>
   <app id="twitch">

@@ -80,7 +80,8 @@ public final class LayoutComponentsFilter extends Filter {
                 "images_post_root_slim.eml",
                 "text_post_root_slim.eml",
                 "post_base_wrapper_slim.eml",
-                "poll_post_root.eml"
+                "poll_post_root.eml",
+                "videos_post_root.eml"
         );
 
         final var communityGuidelines = new StringFilterGroup(
@@ -106,7 +107,8 @@ public final class LayoutComponentsFilter extends Filter {
         inFeedSurvey = new StringFilterGroup(
                 Settings.HIDE_FEED_SURVEY,
                 "in_feed_survey",
-                "slimline_survey"
+                "slimline_survey",
+                "feed_nudge"
         );
 
         final var medicalPanel = new StringFilterGroup(
@@ -161,9 +163,9 @@ public final class LayoutComponentsFilter extends Filter {
                 "inline_expander"
         );
 
-        final var channelBar = new StringFilterGroup(
+        final var compactChannelBar = new StringFilterGroup(
                 Settings.HIDE_CHANNEL_BAR,
-                "channel_bar"
+                "compact_channel_bar"
         );
 
         final var relatedVideos = new StringFilterGroup(
@@ -252,7 +254,7 @@ public final class LayoutComponentsFilter extends Filter {
                 inFeedSurvey,
                 notifyMe,
                 likeSubscribeGlow,
-                channelBar,
+                compactChannelBar,
                 communityPosts,
                 paidPromotion,
                 searchResultVideo,

@@ -5,6 +5,7 @@ import org.json.JSONObject;
 
 import java.io.IOException;
 import java.net.HttpURLConnection;
+import java.util.Locale;
 
 import app.revanced.extension.shared.Logger;
 import app.revanced.extension.shared.requests.Requester;
@@ -30,27 +31,39 @@ final class PlayerRoutes {
     private PlayerRoutes() {
     }
 
-    static String createInnertubeBody(ClientType clientType) {
+    static String createInnertubeBody(ClientType clientType, String videoId) {
         JSONObject innerTubeBody = new JSONObject();
 
         try {
             JSONObject context = new JSONObject();
 
+            // Can override default language only if no login is used.
+            // Could use preferred audio for all clients that do not login,
+            // but if this is a fall over client it will set the language even though
+            // the audio language is not selectable in the UI.
+            ClientType userSelectedClient = BaseSettings.SPOOF_VIDEO_STREAMS_CLIENT_TYPE.get();
+            Locale streamLocale = userSelectedClient == ClientType.ANDROID_VR_NO_AUTH
+                    ? BaseSettings.SPOOF_VIDEO_STREAMS_LANGUAGE.get().getLocale()
+                    : Locale.getDefault();
+
             JSONObject client = new JSONObject();
-            client.put("hl", BaseSettings.SPOOF_VIDEO_STREAMS_LANGUAGE.get().getIso639_1());
+            client.put("deviceMake", clientType.deviceMake);
+            client.put("deviceModel", clientType.deviceModel);
             client.put("clientName", clientType.clientName);
             client.put("clientVersion", clientType.clientVersion);
-            client.put("deviceModel", clientType.deviceModel);
+            client.put("osName", clientType.osName);
             client.put("osVersion", clientType.osVersion);
             if (clientType.androidSdkVersion != null) {
                 client.put("androidSdkVersion", clientType.androidSdkVersion);
             }
+            client.put("hl", streamLocale.getLanguage());
+            client.put("gl", streamLocale.getCountry());
             context.put("client", client);
 
             innerTubeBody.put("context", context);
             innerTubeBody.put("contentCheckOk", true);
             innerTubeBody.put("racyCheckOk", true);
-            innerTubeBody.put("videoId", "%s");
+            innerTubeBody.put("videoId", videoId);
         } catch (JSONException e) {
             Logger.printException(() -> "Failed to create innerTubeBody", e);
         }
@@ -66,6 +79,9 @@ final class PlayerRoutes {
 
         connection.setRequestProperty("Content-Type", "application/json");
         connection.setRequestProperty("User-Agent", clientType.userAgent);
+        // Not a typo. "Client-Name" uses the client type id.
+        connection.setRequestProperty("X-YouTube-Client-Name", String.valueOf(clientType.id));
+        connection.setRequestProperty("X-YouTube-Client-Version", clientType.clientVersion);
 
         connection.setUseCaches(false);
         connection.setDoOutput(true);

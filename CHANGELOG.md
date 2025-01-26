@@ -1,3 +1,245 @@
+# [5.10.0-dev.2](https://github.com/ReVanced/revanced-patches/compare/v5.10.0-dev.1...v5.10.0-dev.2) (2025-01-25)
+
+
+### Features
+
+* **YouTube:** Add patch `Disable HDR video` ([#4347](https://github.com/ReVanced/revanced-patches/issues/4347)) ([0528f7c](https://github.com/ReVanced/revanced-patches/commit/0528f7cad856a2b1347e41944167b0583fc4a3d9))
+
+# [5.10.0-dev.1](https://github.com/ReVanced/revanced-patches/compare/v5.9.1-dev.4...v5.10.0-dev.1) (2025-01-23)
+
+
+### Features
+
+* **YouTube - Theme:** Add option to use custom seekbar accent color ([#4337](https://github.com/ReVanced/revanced-patches/issues/4337)) ([952b4fc](https://github.com/ReVanced/revanced-patches/commit/952b4fc4c9291e1a3e71437b503857763c973dd4))
+
+## [5.9.1-dev.4](https://github.com/ReVanced/revanced-patches/compare/v5.9.1-dev.3...v5.9.1-dev.4) (2025-01-22)
+
+
+### Bug Fixes
+
+* **YouTube - Hide layout components:** Hide new kind of community post ([#4341](https://github.com/ReVanced/revanced-patches/issues/4341)) ([02685c4](https://github.com/ReVanced/revanced-patches/commit/02685c4567aca55f22d45dc238a7d1f0ea264143))
+
+## [5.9.1-dev.3](https://github.com/ReVanced/revanced-patches/compare/v5.9.1-dev.2...v5.9.1-dev.3) (2025-01-22)
+
+
+### Bug Fixes
+
+* **YouTube - Hide seekbar:** Do not hide player seekbar if hide feed seekbar is enabled ([#4333](https://github.com/ReVanced/revanced-patches/issues/4333)) ([f5cf6f2](https://github.com/ReVanced/revanced-patches/commit/f5cf6f2a445492d33815a9772f49deac2d70eba9))
+
+## [5.9.1-dev.2](https://github.com/ReVanced/revanced-patches/compare/v5.9.1-dev.1...v5.9.1-dev.2) (2025-01-22)
+
+
+### Bug Fixes
+
+* **YouTube - Theme:** Fix 19.25 - 19.45 patch error ([5b47a5f](https://github.com/ReVanced/revanced-patches/commit/5b47a5f0f6299daaae209341064fd85f16ca18a6))
+
+## [5.9.1-dev.1](https://github.com/ReVanced/revanced-patches/compare/v5.9.0...v5.9.1-dev.1) (2025-01-21)
+
+
+### Bug Fixes
+
+* **YouTube - Theme:** Replace custom seekbar gradient colors instead of disabling ([#4329](https://github.com/ReVanced/revanced-patches/issues/4329)) ([f03da98](https://github.com/ReVanced/revanced-patches/commit/f03da983051021e0c372557a5354d5d967409564))
+
+# [5.9.0](https://github.com/ReVanced/revanced-patches/compare/v5.8.1...v5.9.0) (2025-01-20)
+
+
+### Bug Fixes
+
+* **YouTube - Spoof video streams:** Resolve playback issues after changing from cellular to wifi ([#4277](https://github.com/ReVanced/revanced-patches/issues/4277)) ([e93e1c8](https://github.com/ReVanced/revanced-patches/commit/e93e1c8ec3367e941034e9c4e3725ec1db429a60))
+* **YouTube - Spoof video streams:** Update client user-agent ([#4304](https://github.com/ReVanced/revanced-patches/issues/4304)) ([7917871](https://github.com/ReVanced/revanced-patches/commit/7917871f510b6b805370ef98a0cf8a4e2df0e900))
+
+
+### Features
+
+* **YouTube - Hide feed components:** Handle new type of surveys ([#4295](https://github.com/ReVanced/revanced-patches/issues/4295)) ([c770e03](https://github.com/ReVanced/revanced-patches/commit/c770e03f3801367cb531af860fbdfa43dca89af0))
+* **YouTube - Playback speed:** Add option to change 2x tap and hold speed ([#4307](https://github.com/ReVanced/revanced-patches/issues/4307)) ([02fb26e](https://github.com/ReVanced/revanced-patches/commit/02fb26e9458fb8635d497e6e78f964055244d738))
+* **YouTube - Settings:** Add option to use new Cairo settings menus ([#4305](https://github.com/ReVanced/revanced-patches/issues/4305)) ([7b8a2a2](https://github.com/ReVanced/revanced-patches/commit/7b8a2a2721ab5351f8c0251401aceddf0c5327df))
+
+# [5.9.0-dev.4](https://github.com/ReVanced/revanced-patches/compare/v5.9.0-dev.3...v5.9.0-dev.4) (2025-01-20)
+
+
+### Bug Fixes
+
+* **YouTube - Spoof video streams:** Update client user-agent ([#4304](https://github.com/ReVanced/revanced-patches/issues/4304)) ([7917871](https://github.com/ReVanced/revanced-patches/commit/7917871f510b6b805370ef98a0cf8a4e2df0e900))
+
+# [5.9.0-dev.3](https://github.com/ReVanced/revanced-patches/compare/v5.9.0-dev.2...v5.9.0-dev.3) (2025-01-19)
+
+
+### Features
+
+* **YouTube - Settings:** Add option to use new Cairo settings menus ([#4305](https://github.com/ReVanced/revanced-patches/issues/4305)) ([7b8a2a2](https://github.com/ReVanced/revanced-patches/commit/7b8a2a2721ab5351f8c0251401aceddf0c5327df))
+
+# [5.9.0-dev.2](https://github.com/ReVanced/revanced-patches/compare/v5.9.0-dev.1...v5.9.0-dev.2) (2025-01-18)
+
+
+### Features
+
+* **YouTube - Playback speed:** Add option to change 2x tap and hold speed ([#4307](https://github.com/ReVanced/revanced-patches/issues/4307)) ([02fb26e](https://github.com/ReVanced/revanced-patches/commit/02fb26e9458fb8635d497e6e78f964055244d738))
+
+# [5.9.0-dev.1](https://github.com/ReVanced/revanced-patches/compare/v5.8.2-dev.1...v5.9.0-dev.1) (2025-01-17)
+
+
+### Features
+
+* **YouTube - Hide feed components:** Handle new type of surveys ([#4295](https://github.com/ReVanced/revanced-patches/issues/4295)) ([c770e03](https://github.com/ReVanced/revanced-patches/commit/c770e03f3801367cb531af860fbdfa43dca89af0))
+
+## [5.8.2-dev.1](https://github.com/ReVanced/revanced-patches/compare/v5.8.1...v5.8.2-dev.1) (2025-01-09)
+
+
+### Bug Fixes
+
+* **YouTube - Spoof video streams:** Resolve playback issues after changing from cellular to wifi ([#4277](https://github.com/ReVanced/revanced-patches/issues/4277)) ([e93e1c8](https://github.com/ReVanced/revanced-patches/commit/e93e1c8ec3367e941034e9c4e3725ec1db429a60))
+
+## [5.8.1](https://github.com/ReVanced/revanced-patches/compare/v5.8.0...v5.8.1) (2025-01-07)
+
+
+### Bug Fixes
+
+* **YouTube - Spoof video streams:** Add 'Android Creator' ([#4262](https://github.com/ReVanced/revanced-patches/issues/4262)) ([0479dd2](https://github.com/ReVanced/revanced-patches/commit/0479dd265e09b0accdf6ff6b00c8e938dc5b96c7))
+
+## [5.8.1-dev.1](https://github.com/ReVanced/revanced-patches/compare/v5.8.0...v5.8.1-dev.1) (2025-01-06)
+
+
+### Bug Fixes
+
+* **YouTube - Spoof video streams:** Add 'Android Creator' ([#4262](https://github.com/ReVanced/revanced-patches/issues/4262)) ([0479dd2](https://github.com/ReVanced/revanced-patches/commit/0479dd265e09b0accdf6ff6b00c8e938dc5b96c7))
+
+# [5.8.0](https://github.com/ReVanced/revanced-patches/compare/v5.7.2...v5.8.0) (2024-12-30)
+
+
+### Bug Fixes
+
+* **GmsCore support:** Do not show battery optimization error on Android Automotive devices (Google built-in) ([#4218](https://github.com/ReVanced/revanced-patches/issues/4218)) ([d6e389c](https://github.com/ReVanced/revanced-patches/commit/d6e389cc43bc40724f032b230f70048276349a19))
+* **YouTube - Exit fullscreen mode:** Exit fullscreen mode of first video opened after cold start ([be5cf2e](https://github.com/ReVanced/revanced-patches/commit/be5cf2e834d87d51b5d3061d46bd7154d6306787))
+* **YouTube - Force original audio:** If stream spoofing to Android then show a summary text why force audio is not available ([#4220](https://github.com/ReVanced/revanced-patches/issues/4220)) ([029aee8](https://github.com/ReVanced/revanced-patches/commit/029aee8023f096413fc80a2c583b4fe55ecb10ac))
+* **YouTube - Spoof video streams:** Ignore harmless error toast if hide ads is disabled ([c3423bb](https://github.com/ReVanced/revanced-patches/commit/c3423bb9e531cfa52f6d28e0b98bbe8ab8684c30))
+
+
+### Features
+
+* **Swipe controls:** Add option to enable/disable fullscreen swipe to next video ([#4222](https://github.com/ReVanced/revanced-patches/issues/4222)) ([119092f](https://github.com/ReVanced/revanced-patches/commit/119092fafa4129849246df15fe8076ed3b491b85))
+* **YouTube - Hide Shorts components:** Add option to hide Shorts in watch history ([#4214](https://github.com/ReVanced/revanced-patches/issues/4214)) ([19c2742](https://github.com/ReVanced/revanced-patches/commit/19c2742aa367367c77bb50ddad6f8a20fef8ea0a))
+* **YouTube - Spoof app version:** Add 'Restore old navigation and toolbar icons' ([f84e459](https://github.com/ReVanced/revanced-patches/commit/f84e459d3d54b3001586796ab4e114ebadf09043))
+* **YouTube:** Add `Change form factor` patch ([#4217](https://github.com/ReVanced/revanced-patches/issues/4217)) ([644ac5b](https://github.com/ReVanced/revanced-patches/commit/644ac5baa68b209a32300149a2efa009b776f9a7))
+* **YouTube:** Add `Exit fullscreen mode` patch ([#4223](https://github.com/ReVanced/revanced-patches/issues/4223)) ([bb5d03b](https://github.com/ReVanced/revanced-patches/commit/bb5d03bd89a3f932c77e4e9de90174c374933688))
+* **YouTube:** Add in app option to select a preferred language for ReVanced specific text ([#4231](https://github.com/ReVanced/revanced-patches/issues/4231)) ([3932af3](https://github.com/ReVanced/revanced-patches/commit/3932af397ae89a0b30191cd870bd6cddb7a078db))
+
+# [5.8.0-dev.8](https://github.com/ReVanced/revanced-patches/compare/v5.8.0-dev.7...v5.8.0-dev.8) (2024-12-28)
+
+
+### Features
+
+* **YouTube:** Add in app option to select a preferred language for ReVanced specific text ([#4231](https://github.com/ReVanced/revanced-patches/issues/4231)) ([3932af3](https://github.com/ReVanced/revanced-patches/commit/3932af397ae89a0b30191cd870bd6cddb7a078db))
+
+# [5.8.0-dev.7](https://github.com/ReVanced/revanced-patches/compare/v5.8.0-dev.6...v5.8.0-dev.7) (2024-12-27)
+
+
+### Bug Fixes
+
+* **YouTube - Spoof video streams:** Ignore harmless error toast if hide ads is disabled ([c3423bb](https://github.com/ReVanced/revanced-patches/commit/c3423bb9e531cfa52f6d28e0b98bbe8ab8684c30))
+
+# [5.8.0-dev.6](https://github.com/ReVanced/revanced-patches/compare/v5.8.0-dev.5...v5.8.0-dev.6) (2024-12-27)
+
+
+### Bug Fixes
+
+* **YouTube - Exit fullscreen mode:** Exit fullscreen mode of first video opened after cold start ([be5cf2e](https://github.com/ReVanced/revanced-patches/commit/be5cf2e834d87d51b5d3061d46bd7154d6306787))
+
+# [5.8.0-dev.5](https://github.com/ReVanced/revanced-patches/compare/v5.8.0-dev.4...v5.8.0-dev.5) (2024-12-27)
+
+
+### Features
+
+* **YouTube:** Add `Change form factor` patch ([#4217](https://github.com/ReVanced/revanced-patches/issues/4217)) ([644ac5b](https://github.com/ReVanced/revanced-patches/commit/644ac5baa68b209a32300149a2efa009b776f9a7))
+
+# [5.8.0-dev.4](https://github.com/ReVanced/revanced-patches/compare/v5.8.0-dev.3...v5.8.0-dev.4) (2024-12-27)
+
+
+### Bug Fixes
+
+* **GmsCore support:** Do not show battery optimization error on Android Automotive devices (Google built-in) ([#4218](https://github.com/ReVanced/revanced-patches/issues/4218)) ([d6e389c](https://github.com/ReVanced/revanced-patches/commit/d6e389cc43bc40724f032b230f70048276349a19))
+
+
+### Features
+
+* **Swipe controls:** Add option to enable/disable fullscreen swipe to next video ([#4222](https://github.com/ReVanced/revanced-patches/issues/4222)) ([119092f](https://github.com/ReVanced/revanced-patches/commit/119092fafa4129849246df15fe8076ed3b491b85))
+* **YouTube:** Add `Exit fullscreen mode` patch ([#4223](https://github.com/ReVanced/revanced-patches/issues/4223)) ([bb5d03b](https://github.com/ReVanced/revanced-patches/commit/bb5d03bd89a3f932c77e4e9de90174c374933688))
+
+# [5.8.0-dev.3](https://github.com/ReVanced/revanced-patches/compare/v5.8.0-dev.2...v5.8.0-dev.3) (2024-12-26)
+
+
+### Bug Fixes
+
+* **YouTube - Force original audio:** If stream spoofing to Android then show a summary text why force audio is not available ([#4220](https://github.com/ReVanced/revanced-patches/issues/4220)) ([029aee8](https://github.com/ReVanced/revanced-patches/commit/029aee8023f096413fc80a2c583b4fe55ecb10ac))
+
+# [5.8.0-dev.2](https://github.com/ReVanced/revanced-patches/compare/v5.8.0-dev.1...v5.8.0-dev.2) (2024-12-24)
+
+
+### Features
+
+* **YouTube - Spoof app version:** Add 'Restore old navigation and toolbar icons' ([f84e459](https://github.com/ReVanced/revanced-patches/commit/f84e459d3d54b3001586796ab4e114ebadf09043))
+
+# [5.8.0-dev.1](https://github.com/ReVanced/revanced-patches/compare/v5.7.2...v5.8.0-dev.1) (2024-12-24)
+
+
+### Features
+
+* **YouTube - Hide Shorts components:** Add option to hide Shorts in watch history ([#4214](https://github.com/ReVanced/revanced-patches/issues/4214)) ([19c2742](https://github.com/ReVanced/revanced-patches/commit/19c2742aa367367c77bb50ddad6f8a20fef8ea0a))
+
+## [5.7.2](https://github.com/ReVanced/revanced-patches/compare/v5.7.1...v5.7.2) (2024-12-24)
+
+
+### Bug Fixes
+
+* **YouTube - Hide layout components:** Don't hide Shorts channel bar when toggling for video player ([9af6412](https://github.com/ReVanced/revanced-patches/commit/9af6412d92ec31e612eaabba6578453da0fc61d6))
+* **YouTube - Spoof video streams:** Add iOS TV client, restore iOS 'force AVC', show client type in stats for nerds ([#4202](https://github.com/ReVanced/revanced-patches/issues/4202)) ([ab29f80](https://github.com/ReVanced/revanced-patches/commit/ab29f808a9f55b5ab0055533c1a6de549b0631a6))
+
+## [5.7.2-dev.2](https://github.com/ReVanced/revanced-patches/compare/v5.7.2-dev.1...v5.7.2-dev.2) (2024-12-23)
+
+
+### Bug Fixes
+
+* **YouTube - Hide layout components:** Don't hide Shorts channel bar when toggling for video player ([9af6412](https://github.com/ReVanced/revanced-patches/commit/9af6412d92ec31e612eaabba6578453da0fc61d6))
+
+## [5.7.2-dev.1](https://github.com/ReVanced/revanced-patches/compare/v5.7.1...v5.7.2-dev.1) (2024-12-23)
+
+
+### Bug Fixes
+
+* **YouTube - Spoof video streams:** Add iOS TV client, restore iOS 'force AVC', show client type in stats for nerds ([#4202](https://github.com/ReVanced/revanced-patches/issues/4202)) ([ab29f80](https://github.com/ReVanced/revanced-patches/commit/ab29f808a9f55b5ab0055533c1a6de549b0631a6))
+
+## [5.7.1](https://github.com/ReVanced/revanced-patches/compare/v5.7.0...v5.7.1) (2024-12-23)
+
+
+### Bug Fixes
+
+* **YouTube - SponsorBlock:** Show a toast and not a dialog if segment submitted successfully ([134b189](https://github.com/ReVanced/revanced-patches/commit/134b189791113dcf1a1cb7c87b8a0954f432730c))
+* **YouTube - Spoof video streams:** Use 2 letter device language code ([33ff997](https://github.com/ReVanced/revanced-patches/commit/33ff9972000581aca92262f984efb114eeeb9537))
+* **YouTube - Spoof video streams:** Use Android VR authentication if using default audio language ([#4191](https://github.com/ReVanced/revanced-patches/issues/4191)) ([98773cc](https://github.com/ReVanced/revanced-patches/commit/98773cc7d46e5c9c7715b82c8006f1ccbcc5443c))
+* **YouTube - Theme:** Use dark theme color for status and navigation bar ([0240efe](https://github.com/ReVanced/revanced-patches/commit/0240efe33e5444625ca2b760c861c9046d3dc836))
+* **YouTube:** Do not reset playback speed to 1.0x after closing comment thread (Fixes stock YouTube bug) ([#4195](https://github.com/ReVanced/revanced-patches/issues/4195)) ([dda788c](https://github.com/ReVanced/revanced-patches/commit/dda788c58c789d4f91646ea8e8a8077f590ab6b3))
+
+## [5.7.1-dev.5](https://github.com/ReVanced/revanced-patches/compare/v5.7.1-dev.4...v5.7.1-dev.5) (2024-12-22)
+
+
+### Bug Fixes
+
+* **YouTube - Spoof video streams:** Use 2 letter device language code ([33ff997](https://github.com/ReVanced/revanced-patches/commit/33ff9972000581aca92262f984efb114eeeb9537))
+
+## [5.7.1-dev.4](https://github.com/ReVanced/revanced-patches/compare/v5.7.1-dev.3...v5.7.1-dev.4) (2024-12-22)
+
+
+### Bug Fixes
+
+* **YouTube:** Do not reset playback speed to 1.0x after closing comment thread (Fixes stock YouTube bug) ([#4195](https://github.com/ReVanced/revanced-patches/issues/4195)) ([dda788c](https://github.com/ReVanced/revanced-patches/commit/dda788c58c789d4f91646ea8e8a8077f590ab6b3))
+
+## [5.7.1-dev.3](https://github.com/ReVanced/revanced-patches/compare/v5.7.1-dev.2...v5.7.1-dev.3) (2024-12-22)
+
+
+### Bug Fixes
+
+* **YouTube - SponsorBlock:** Show a toast and not a dialog if segment submitted successfully ([134b189](https://github.com/ReVanced/revanced-patches/commit/134b189791113dcf1a1cb7c87b8a0954f432730c))
+
 ## [5.7.1-dev.2](https://github.com/ReVanced/revanced-patches/compare/v5.7.1-dev.1...v5.7.1-dev.2) (2024-12-22)
 
 
